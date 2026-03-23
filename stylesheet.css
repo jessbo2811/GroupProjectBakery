@@ -1,7 +1,7 @@
 body {
     font-family: verdana;
     font-size: 20px;
-    background-color: #ffe5ec
+    background-color: #ffe5ec;
 }
 
 .topnav {
@@ -73,7 +73,9 @@ img {
     display: grid;
     grid-template-areas:
       "catering-desc catering-form"
-      "catering-menu catering-menu";
+      "catering-menu catering-menu"
+     " index-desc index-subdesc"
+     "index-products index-products";
     grid-template-columns: 2fr 2fr;
     gap: 3px;
     background-color: #ffb3c6;
@@ -95,6 +97,18 @@ img {
 
   .grid-container div.catering-menu {
     grid-area: catering-menu;
+  }
+
+  .grid-container div.index-desc {
+    grid-area: index-desc;
+  }
+
+  .grid-container div.index-subdesc {
+    grid-area: index-subdesc;
+  }
+
+  .grid-container div.index-products {
+    grid-area: index-products;
   }
 
   .hint {
