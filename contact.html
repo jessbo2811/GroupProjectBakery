@@ -6,6 +6,7 @@
         <title>Petal Bakes</title>
         <link rel="stylesheet" href="stylesheet.css">
         <link rel="normalize" href="normalize.css">
+        <script src="index.js"></script><!--K-->
     </head>
     <body>
         <div id="mainheader">
@@ -21,9 +22,11 @@
         <p>Contact page </p>
         <form>
             <label for="email">Email:</label><br>
+            <span id="hint_email" class="hint"> - please enter your email</span><!--K-->
             <input type="text" id="email" name="email"><br>
             <br>
             <label for="enquiry-subject">What is your Enquiry About?:</label><br>
+            <span id="hint_enquirySubject" class="hint"> - please select an option</span><!--K-->
             <input type="radio" id="delivery-enq" name="enquiry-subject" value="Our Delivery Service">
             <label for="delivery-enq">Our Delivery Service</label><br>
             <input type="radio" id="catering-enq" name="enquiry-subject" value="Catering Services">
@@ -32,7 +35,10 @@
             <label for="other-enq">Other</label><br>
             <br>
             <label for="enquiry">What is your Enquiry?</label><br>
+            <span id="hint_enquiry" class="hint"> - please enter your enquiry</span><!--K-->
             <input type="text" id="enquiry" name="enquiry">
+            <br><!--K-->
+            <button id="send-enq">Send Enquiry</button><!--K-->
         </form>
     </body>
 </html>
