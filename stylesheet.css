@@ -96,3 +96,7 @@ img {
   .grid-container div.catering-menu {
     grid-area: catering-menu;
   }
+
+  .hint {
+    display: none;
+  }
