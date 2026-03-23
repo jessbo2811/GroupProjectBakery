@@ -30,6 +30,28 @@ img {
   margin: auto;
 }
 
+.custom-orders {
+  display: flex;
+  justify-content: center;
+}
+
+.catering-promobtn {
+  display: inline-block;
+  background-color: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.catering-promobtn:hover {
+  background-color: #ff1493;
+}
+
 .boxheading {
     height: 200px;
     border: 1px solid rgb(255, 0, 149);
@@ -76,7 +98,10 @@ img {
       "catering-desc catering-form"
       "catering-menu catering-menu"
      " index-desc index-subdesc"
-     "index-products index-products";
+     "index-products index-products"
+     "index-bottom index-bottom"
+     "index-promo index-promo"
+     "index-catering index-catering";
     grid-template-columns: 2fr 2fr;
     gap: 3px;
     background-color: #ffb3c6;
@@ -112,8 +137,39 @@ img {
     grid-area: index-products;
   }
 
+  .grid-container div.index-promo {
+    grid-area: index-promo;
+  }
+
+  .grid-container div.index-bottom {
+    grid-area: index-bottom;
+  }
+
+  .grid-container div.index-catering {
+    grid-area: index-catering;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .catering-promobtn a {
+    color: white;
+    text-decoration: none;
+  }
+
   .hint {
     display: none;
   }
 
-
+/* Footer */
+footer {
+    background: #fde8ef;
+    border-top: 1px solid #f4a7bf;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
