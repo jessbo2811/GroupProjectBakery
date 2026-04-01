@@ -6,6 +6,7 @@
         <title>Petal Bakes</title>
         <link rel="stylesheet" href="stylesheet.css">
         <link rel="normalize" href="normalize.css">
+        <script src="catering.js"></script><!--K-->
     </head>
     <body>
         <div id="mainheader">
@@ -26,9 +27,11 @@
                 <h2>Book Our Catering Services Now!</h2>
                 <form>
                     <label for="email">Email:</label><br>
+                    <span id="hint_email" class="hint"> - please enter your email</span><!--K-->
                     <input type="text" id="email" name="email"><br>
                     <br>
                     <label for="menu-choice">Which Menu?:</label><br>
+                    <span id="hint_menuChoice" class="hint"> - please select an option</span><!--K-->
                     <input type="radio" id="sweet-opt" name="menu-choice" value="Sweet">
                     <label for="sweet-opt">Sweet</label><br>
                     <input type="radio" id="savoury-opt" name="menu-choice" value="Savoury">
@@ -37,7 +40,10 @@
                     <label for="sweet-opt">Sweet and Savoury</label><br>
                     <br>
                     <label for="catering-date">Date:</label><br>
+                    <span id="hint_date" class="hint"> - please select a suitable catering date</span><!--K-->
                     <input type="date" id="catering-date" name="catering-date" min="" max="">
+                    <br><!--K-->
+                    <button id="send-enq">Send Enquiry</button><!--K-->
                 </form>
             </div>
             <div class="catering-menu">
