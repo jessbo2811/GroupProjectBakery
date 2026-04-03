@@ -28,10 +28,6 @@ body {
 img { 
    display: block;
   margin: auto;
-}
-
-.custom-orders {
-  display: flex;
   justify-content: center;
 }
 
@@ -81,9 +77,10 @@ img {
   
   
   .clearfix::after {
-	content: "";
-	clear: both;
-	display: table;
+    content: "";
+    clear: both;
+    display: table;
+    justify-content: center;
   }
   .fltlt {
 	float: left;
@@ -97,6 +94,68 @@ img {
 	clear: both;
    }
 
+  .gdimagebanner {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "indeximg1 indeximg2 indeximg3"
+    "custom-orders custom-orders custom-orders"
+    "indexpromo1 indexpromo2 indexpromo3"
+    "index-catering index-catering index-catering";
+    gap: 5px;
+    padding: 5px;
+   }
+
+  .indeximg1 {
+    grid-area: indeximg1;
+    width: 100%;
+    height: auto;
+  }
+
+  .indeximg2 {
+    grid-area: indeximg2;
+    text-align: center;
+    padding: 10px;
+    object-fit: cover;
+  }
+
+  .indeximg3 {
+    grid-area: indeximg3;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .custom-orders {
+    grid-area: custom-orders;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .indexpromo1 {
+    grid-area: indexpromo1;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .indexpromo2 {
+    grid-area: indexpromo2;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .indexpromo3 {
+    grid-area: indexpromo3;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .index-catering {
+    grid-area: index-catering;
+    text-align: center;
+    padding: 30px;
+  }
+  
   .grid-container {
     display: grid;
     grid-template-areas:
@@ -186,6 +245,7 @@ img {
   width: 80%;
   max-width: 640px;
 }
+
 #gallery {
   list-style: none;
   margin: 3m;
@@ -202,7 +262,6 @@ img {
   width: 6em;
   background-color: #ff69b4;
   border-radius: 0.4em;
-
 }
 
 /* Footer */
