@@ -1,237 +1,73 @@
-body {
-    font-family: verdana;
-    font-size: 20px;
-    background-color: #ffe5ec
+@ -35,6 +35,11 @@ img {
+  justify-content: center;
 }
 
-.topnav {
-  background-color: #ffb3c6;
-  overflow: hidden;
-  align-content: center;
-  align-content: center;
-}
-
-.topnav a {
-  float: right;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ffc2d1;
-  color: white;
-}
-
-img { 
-   display: block;
-  margin: auto;
+.meet-the-team {
+  display: flex;
+  justify-content: center;
 }
 
 .catering-promobtn {
   display: inline-block;
   background-color: #ff69b4;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-left: 10px;
-  vertical-align: middle;
-}
-
-.catering-promobtn:hover {
-  background-color: #ff1493;
-}
-
-.boxheading {
-    height: 200px;
-    border: 1px solid rgb(255, 0, 149);
-    padding: 10px;
-    margin: 10px;
-}
-
-/* Creating Boxes Side by Side to eachother */
-.box {
-	float: left;
-	width: 25%;
-	padding: 50px;
-	border: 1px solid black;
-  }
-
-  .box2 {
-	float: left;
-	width: 50%;
-	padding: 25px;
-	border: 1px solid black;
-  }
-  
-  
-  .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-    justify-content: center;
-  }
-  .fltlt {
-	float: left;
-	margin-right: 8px;
-   }
-   .fltrt {
-	float: right;
-	margin-left: 16px;
-   }
-	.clear {
-	clear: both;
-   }
-
-  .gdimagebanner {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-    "indeximg1 indeximg2 indeximg3"
-    "custom-orders custom-orders custom-orders"
-    "indexpromo1 indexpromo2 indexpromo3"
-    "index-catering index-catering index-catering";
-    gap: 5px;
-    padding: 5px;
-   }
-
-  .indeximg1 {
-    grid-area: indeximg1;
-    width: 100%;
-    height: auto;
-  }
-
-  .indeximg1:hover {
-    
-  }
-
-  .indeximg2 {
-    grid-area: indeximg2;
-    text-align: center;
-    padding: 10px;
-    object-fit: cover;
-  }
-
-  .indeximg3 {
-    grid-area: indeximg3;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .custom-orders {
-    grid-area: custom-orders;
-    text-align: center;
-    padding: 30px;
-  }
-
-  .indexpromo1 {
-    grid-area: indexpromo1;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .indexpromo2 {
-    grid-area: indexpromo2;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .indexpromo3 {
-    grid-area: indexpromo3;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .index-catering {
-    grid-area: index-catering;
-    text-align: center;
-    padding: 30px;
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-areas:
-      "catering-desc catering-form"
-      "catering-menu catering-menu"
-     " index-desc index-subdesc"
+@ -101,7 +106,9 @@ img {
      "index-products index-products"
      "index-bottom index-bottom"
      "index-promo index-promo"
      "index-catering index-catering";
+     "index-catering index-catering"
+     "index-about index-about2"
+      "index-team index-team";
     grid-template-columns: 2fr 2fr;
     gap: 3px;
     background-color: #ffb3c6;
-    padding: 5px;
-  }
-
-  .grid-container div {
-    background-color:#ffc2d1;
-    padding: 10px;
-  }
-
-  .grid-container div.catering-desc {
-    grid-area: catering-desc;
-  }
-
-  .grid-container div.catering-form {
-    grid-area: catering-form;
-  }
-
-  .grid-container div.catering-menu {
-    grid-area: catering-menu;
-  }
-
-  .grid-container div.index-desc {
-    grid-area: index-desc;
-  }
-
-  .grid-container div.index-subdesc {
-    grid-area: index-subdesc;
-  }
-
-  .grid-container div.index-products {
-    grid-area: index-products;
-  }
-
-  .grid-container div.index-promo {
-    grid-area: index-promo;
-  }
-
-  .grid-container div.index-bottom {
+@ -145,6 +152,18 @@ img {
     grid-area: index-bottom;
+  }
+
+  .grid-container div.index-about {
+    grid-area: index-about;
+  }
+
+  .grid-container div.index-about2 {
+    grid-area: index-about2;
+  }
+
+  .grid-container div.index-team {
+    grid-area: index-team;
   }
 
   .grid-container div.index-catering {
     grid-area: index-catering;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .catering-promobtn a {
-    color: white;
-    text-decoration: none;
-  }
-
-  .hint {
+@ -162,6 +181,30 @@ img {
     display: none;
   }
+
+/* Image Gallery */
+#placeholder {
+  width: 80%;
+  max-width: 640px;
+}
+#gallery {
+  list-style: none;
+  margin: 3m;
+}
+
+#gallery li {
+  display: inline;
+  margin: 1em;
+}
+
+#gallery a {
+  text-decoration: none;
+  display: inline-block;
+  width: 6em;
+  background-color: #ff69b4;
+  border-radius: 0.4em;
+
+}
 
 /* Footer */
 footer {
     background: #fde8ef;
-    border-top: 1px solid #f4a7bf;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
