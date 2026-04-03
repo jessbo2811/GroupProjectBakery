@@ -35,6 +35,11 @@ img {
   justify-content: center;
 }
 
+.meet-the-team {
+  display: flex;
+  justify-content: center;
+}
+
 .catering-promobtn {
   display: inline-block;
   background-color: #ff69b4;
@@ -101,7 +106,9 @@ img {
      "index-products index-products"
      "index-bottom index-bottom"
      "index-promo index-promo"
-     "index-catering index-catering";
+     "index-catering index-catering"
+     "index-about index-about2"
+      "index-team index-team";
     grid-template-columns: 2fr 2fr;
     gap: 3px;
     background-color: #ffb3c6;
@@ -145,6 +152,18 @@ img {
     grid-area: index-bottom;
   }
 
+  .grid-container div.index-about {
+    grid-area: index-about;
+  }
+
+  .grid-container div.index-about2 {
+    grid-area: index-about2;
+  }
+
+  .grid-container div.index-team {
+    grid-area: index-team;
+  }
+
   .grid-container div.index-catering {
     grid-area: index-catering;
     display: flex;
@@ -161,6 +180,30 @@ img {
   .hint {
     display: none;
   }
+
+/* Image Gallery */
+#placeholder {
+  width: 80%;
+  max-width: 640px;
+}
+#gallery {
+  list-style: none;
+  margin: 3m;
+}
+
+#gallery li {
+  display: inline;
+  margin: 1em;
+}
+
+#gallery a {
+  text-decoration: none;
+  display: inline-block;
+  width: 6em;
+  background-color: #ff69b4;
+  border-radius: 0.4em;
+
+}
 
 /* Footer */
 footer {
