@@ -1,48 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@ -6,6 +6,23 @@
         <title>Petal Bakes</title>
         <link rel="stylesheet" href="stylesheet.css">
         <link rel="normalize" href="normalize.css">
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const galleryLinks = document.querySelectorAll("#gallery a");
+            const placeholder = document.getElementById("placeholder");
+            const description = document.getElementById("description");
+
+            galleryLinks.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const imageSrc = this.getAttribute("href");
+                    const imageTitle = this.getAttribute("title");
+                    placeholder.setAttribute("src", imageSrc);
+                    description.textContent = imageTitle;
+                });
+            });
+        });
+        </script>
     </head>
     <body>
         <div id="mainheader">
-            <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" height="200px">
-            <div class="topnav">
-                <a class="active" href="index.html">Home</a>
-                <a href="product.html">Products</a>
-                <a href="catering.html">Catering</a>
-                <a href="contact.html">Contact</a>
+@ -18,7 +35,8 @@
                 <a href="about.html">About</a>
             </div>
         </div>
 
+    <div class="grid-container">
+            <div class="index-about">
         <p><b>OUR STORY</b></p>
         <p>Petal bakes was created with a simple idea: to make freshly-baked high quality treats more accessible and convenient for everyone. Inspired by the comfort and joy that baked goods bring, our bakery was founded to combine traditional baking with the ease of online ordering. We believe that everyone should be able to enjoy delicious,
         handcrafted pastries without having to leave the comfort of your own home.</p>
-        <p> What started as a passion for baking has grown into a place where creativity, flavour and quality come together. At petal bakes every item is carefully prepared to bring warmth and comfort to your day.</p>
+@ -26,8 +44,9 @@
 
         <p><b> OUR MISSION </b> </p>
         <p>Our mission is to deliver hand-crafted baked goods directly to your doorsteps with just a few clicks. You can enjoy
         these mouth-watering delights all baked with care, intricacy and love.</p>
 
+        these mouth-watering delights all baked with care, intricacy and love.</p> 
+            </div>
+                <div class="index-about2">
         <p><b>OUR VALUES</b></p>
     <ul>
             <li><b>Quality</b> - We use carefully selected, high-quality ingredients to ensure our bakes are as good as they look.</li>
-            <li><b>Freshness</b> - Our baked goods are prepared swiftly with care so you receive them at their best. </li>
-            <li><b>Creativity</b> - We love experimenting with flavours and designs to create one of a kind delicious. </li>
-            <li><b>Customer happiness</b> - Customer happiness is at the centre of everything we do- from the first click to the final bite, we want to make every order
+@ -37,12 +56,53 @@
             a delightful experience.</li>
             <li><b>Sustainability</b> - We are passionate about protecting our environment. Where possible, we make an effort to use
             responsibly sourced ingredients and eco-friendly packaging to reduce waste and minimise environmental impact.</li>
 
+                </div>
+    </ul>
+        <div class="index-team">
+        <h3 class="meet-the-team">MEET THE TEAM</h3>
+        <ul id="gallery">
+    <li>
+        <a href="images/coral1.jpg" title=""> Monica </a>
+    </li>
+    <li>
+        <a href="images/coral2.jpg" title=""> Jess </a>
+    </li>
+    <li>
+        <a href="images/coral3.jpg" title=""> Quil </a>
+    </li>
+    <li>
+        <a href="images/coral4.jpg" title=""> Zainab </a>
+    </li>
+    <li>
+        <a href="images/coral5.jpg" title=""> Kary </a>
     </ul>
         <p><b>MEET THE TEAM</b></p>
         <p> INSERT slideshow of staff</p>
+        <img id="placeholder" src="images/coral1.jpg" alt= "Blue coral" />
+    <p id="description">Coral images</p>
+
+        </div>
 
         <p><b>WHY CHOOSE US?</b></p>
          <p>At petal bakes we are more than just a bakery - we are a place where flavour, quality and convenience come together to bake something special  </p>
+         </div>
+    </div>
+         
+        
+         <footer>
+    <div class="footer">
+        <h4>Petal Bakes</h4>
+        <p>Handmade bakes, freshly made in Brighton, Sussex.</p>
+    </div>
+    <div class="footer">
+        <h4>Contact</h4>
+        <a href="contact.html">Contact Form</a>
+        <p>01273 000 000</p>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">TikTok</a>
+    </div>
+</footer>
+</div>
+<small>&copy; 2026, Petal Bakes</small>
+   
     </body>
 </html>
