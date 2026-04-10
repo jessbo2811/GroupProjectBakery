@@ -275,3 +275,47 @@ footer {
     gap: 2rem;
     flex-wrap: wrap;
 }
+
+
+.cal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-bottom: 8px;
+}
+.cal-day-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.cal-day {
+    text-align: center;
+    padding: 6px 2px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+}
+.cal-day.available  { background: #d4edda; cursor: pointer; }
+.cal-day.booked     { background: #f8d7da; }
+.cal-day.unavailable{ background: #e9ecef; color: #aaa; }
+.cal-day.past       { opacity: 0.4; }
+.cal-day.selected   { outline: 2px solid #333; }
+.day-label          { font-size: 0.65rem; }
+.cal-legend         { display: flex; gap: 12px; font-size: 0.8rem; }
+.legend-available   { color: green; }
+.legend-booked      { color: red; }
+
+
+#catering-date {
+    display: none;
+}
+.cal-day span {
+    pointer-events: none;
+}
