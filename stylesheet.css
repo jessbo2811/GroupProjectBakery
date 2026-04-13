@@ -354,7 +354,6 @@ footer {
 /*Layout*/
 .payment-page .checkout-container {
   display: flex;
-
     max-width: 1000px;
     margin: 40px auto;
     gap: 50px;
@@ -399,6 +398,7 @@ footer {
     border: 1px solid #e5c9cf;
     border-radius: 10px;
     font-size:14px;
+    box-sizing: border-box;
 }
 /*Focus*/
 .payment-page input:focus{
