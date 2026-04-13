@@ -20,7 +20,7 @@
             </div>
         </div>
         <p>Contact page </p>
-        <form>
+        <form method="POST" action="contact.php" target="self">
             <label for="email">Email:</label><br>
             <span id="hint_email" class="hint"> - please enter your email</span><!--K-->
             <input type="text" id="email" name="email"><br>
@@ -38,7 +38,7 @@
             <span id="hint_enquiry" class="hint"> - please enter your enquiry</span><!--K-->
             <input type="text" id="enquiry" name="enquiry">
             <br><!--K-->
-            <button id="send-enq">Send Enquiry</button><!--K-->
+            <button id="send-enq" type="submit" name="send-enq">Send Enquiry</button><!--K-->
         </form>
     </body>
 </html>
