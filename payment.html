@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petal Bakes Checkout</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="normalize" href="normalize.css">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel=" stylesheet">
+
+</head>
+<body class="payment-page">
+<!--Minimal Header-->
+<div class="mainheader">
+    <img src="images/petalbakes-logo.png" class="logo">
+<a href="product.html" class="back-link"><- Back to shop </a>
+    </div>
+
+<!--Checkout Layout-->
+<div class = "checkout-container">
+    <!--LEFT-->
+    <div class="checkout-left">
+
+
+<h2> Payment details </h2>
+<div id=" order-summary"></div>
+
+<form id="payment-form">
+   <input type = "text" name="name" placeholder = "Full Name" required>
+    <input type = "text" name="card" placeholder = "Card Number" required>
+    <div class="row">
+        <input type = "text" name="expiry" placeholder = "MM / YY" required>
+        <input type = "text" name="cvc" placeholder = "CVC" required>
+
+    </div>
+
+    <button type ="submit">Pay Now</button>
+</form>
+        <p id="message"></p>
+    </div>
+
+<p id=" message"></p>
+<script src = "payment.js"></script>
+</body>
+
+</html>

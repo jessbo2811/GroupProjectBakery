@@ -8,16 +8,17 @@
         <link rel="normalize" href="normalize.css">
     </head>
     <body>
-        <div id="mainheader">
-            <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" height="200px">
-            <div class="topnav">
-                <a class="active" href="index.html">Home</a>
-                <a href="product.html">Products</a>
-                <a href="catering.html">Catering</a>
-                <a href="contact.html">Contact</a> 
-                <a href="about.html">About</a>
-            </div>
+    <div id="mainheader">
+        <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" height="200px">
+        <div class="topnav">
+            <a href="payment.html">Payment</a>
+            <a class="active" href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="catering.html">Catering</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
         </div>
+    </div>
 
         <div class="boxheading">
             <h3>About Petal Bakes</h3> <!-- Zainab Edit -->
@@ -138,6 +139,12 @@
     </div>
 </footer>
 <small>&copy; 2026, Petal Bakes</small>
-   
+//added order summary
+    localStorage.setItem("cart",JSON.stringify([
+    {name: "Chocolate chip cookies", price: 14.00, qty: 1},
+    {name: "Raspberry cookies", price: 14.00, qty: 1},
+    {name: "Banana Bread", price: 14.00, qty: 1}
+    ]));
     </body>
+
 </html>

@@ -275,3 +275,174 @@ footer {
     gap: 2rem;
     flex-wrap: wrap;
 }
+
+
+.cal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-bottom: 8px;
+}
+.cal-day-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.cal-day {
+    text-align: center;
+    padding: 6px 2px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+}
+.cal-day.available  { background: #d4edda; cursor: pointer; }
+.cal-day.booked     { background: #f8d7da; }
+.cal-day.unavailable{ background: #e9ecef; color: #aaa; }
+.cal-day.past       { opacity: 0.4; }
+.cal-day.selected   { outline: 2px solid #333; }
+.day-label          { font-size: 0.65rem; }
+.cal-legend         { display: flex; gap: 12px; font-size: 0.8rem; }
+.legend-available   { color: green; }
+.legend-booked      { color: red; }
+
+
+#catering-date {
+    display: none;
+}
+.cal-day span {
+    pointer-events: none;
+}
+/*===PETAL BAKES FINAL CHECKOUT====*/
+.payment-page{
+
+    font-family: 'Inter', sans-serif;
+    background:
+    url("https://www.transparenttextures.com/patterns/flowers.png"),
+    linear-gradient(to bottom, #fff7fa, #ffeef3);
+    color:#2d1e1e;}
+
+/*Header*/
+.payment-page .mainheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 20px auto;
+
+}
+
+.payment-page .logo{
+    height: 100px;
+}
+.payment-page .back-link{
+    text-decoration: none;
+    color: #b76e79;
+    font-weight: 500;
+
+}
+.payment-page .back-link:hover{
+    color: #ec4899
+
+}
+/*Layout*/
+.payment-page .checkout-container {
+  display: flex;
+    max-width: 1000px;
+    margin: 40px auto;
+    gap: 50px;
+    padding:20px;
+
+}
+/*left*/
+.payment-page .checkout-left{
+    flex: 1;
+}
+/*Right*/
+.payment-page .checkout-right {
+    width: 320px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #f3d6dc;
+    box-shadow: 0 10px 30px rgba(183, 110, 121, 0.15);
+}
+
+    /*Headings*/
+    .payment-page h2{
+        font-family:'Playfair Display', serif;
+        color: #b76e79;
+        margin-bottom: 20px;
+    }
+
+/*Form*/
+.payment-page #payment-form{
+     background: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    border:1px solid #f3d6dc;
+    box-shadow: 0 10px 30px rgba(183, 110, 121, 0.12);
+}
+/*Inputs*/
+.payment-page input{
+
+    width: 100%;
+    padding: 14px;
+    margin-bottom:14px;
+    border: 1px solid #e5c9cf;
+    border-radius: 10px;
+    font-size:14px;
+    box-sizing: border-box;
+}
+/*Focus*/
+.payment-page input:focus{
+    outline: none;
+    border-color: #f472b6;
+    box-shadow: 0 0 0 3px rgba(224, 114, 182, 0.2);
+}
+/*Row*/
+.payment-page .row{
+    display: flex;
+    gap: 10px;
+
+
+}
+/*Button*/
+
+.payment-page button{
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #f9a8d4, #F472B6);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.payment-page button:hover{
+    background: linear-gradient(135deg, #F472b6, #ec4899);
+}
+/*Message*/
+.payment-page #message {
+    margin-top: 15px;
+    text-align: center;
+    color: #b76e79;
+
+}
+/*Mobile*/
+@media (max-width: 768px){
+    .payment-page .checkout-container {
+        flex-direction: column;
+    }
+    .payment-page .checkout-right {
+        width: 100%;
+    }
+}
