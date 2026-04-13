@@ -3,35 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petal Bakes</title>
+    <title>Petal Bakes Checkout</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="normalize" href="normalize.css">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel=" stylesheet">
+
 </head>
-<body>
-<div id="mainheader">
-    <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" height="200px">
-    <div class="topnav">
-        <a href="payment.html">Payment</a>
-        <a class="active" href="index.html">Home</a>
-        <a href="product.html">Products</a>
-        <a href="catering.html">Catering</a>
-        <a href="contact.html">Contact</a>
-        <a href="about.html">About</a>
+<body class="payment-page">
+<!--Minimal Header-->
+<div class="mainheader">
+    <img src="images/petalbakes-logo.png" class="logo">
+<a href="product.html" class="back-link"><- Back to shop </a>
+    </div>
+
+<!--Checkout Layout-->
+<div class = "checkout-container">
+    <!--LEFT-->
+    <div class="checkout-left">
+
+
+<h2> Payment details </h2>
+<div id=" order-summary"></div>
+
+<form id="payment-form">
+   <input type = "text" name="name" placeholder = "Full Name" required>
+    <input type = "text" name="card" placeholder = "Card Number" required>
+    <div class="row">
+        <input type = "text" name="expiry" placeholder = "MM / YY" required>
+        <input type = "text" name="cvc" placeholder = "CVC" required>
 
     </div>
-</div>
-<form id="payment-form">
-   <input type = "text" name=" name" placeholder = "Full Name" required><br><br>
-    <input type = "text" name=" name" placeholder = "Full Name" required><br><br>
-    <input type = "text" name=" name" placeholder = "Full Name" required><br><br>
 
-    <input type = "text" name=" name" placeholder = "Full Name" required><br><br>
-    <input type = "text" name=" name" placeholder = "Full Name" required><br><br>
-    <input type = "text" name=" name" placeholder = "Full Name" required><br><br>
-
-    <button type = "submit">Pay Now</button>
-
+    <button type ="submit">Pay Now</button>
 </form>
+        <p id="message"></p>
+    </div>
 
 <p id=" message"></p>
 <script src = "payment.js"></script>
