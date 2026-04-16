@@ -276,6 +276,40 @@ footer {
     flex-wrap: wrap;
 }
 
+/*Product page */
+.product-page {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+}
+
+.product {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border: 1px solid rgb(255, 0, 149);
+    padding: 10px;
+    align-items: center;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.product h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.product p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
 
 .cal-header {
     display: flex;
