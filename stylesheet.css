@@ -54,10 +54,10 @@ img {
 }
 
 .boxheading {
-    height: 200px;
     border: 1px solid rgb(255, 0, 149);
     padding: 10px;
     margin: 10px;
+    overflow: hidden;
 }
 
 /* Creating Boxes Side by Side to eachother */
@@ -243,12 +243,13 @@ img {
 /* Image Gallery */
 #placeholder {
   width: 80%;
-  max-width: 640px;
+  max-width: 400px;
 }
 
 #gallery {
   list-style: none;
   margin: 3m;
+  text-align: center;
 }
 
 #gallery li {
@@ -259,11 +260,49 @@ img {
 #gallery a {
   text-decoration: none;
   display: inline-block;
-  width: 6em;
   background-color: #ff69b4;
-  border-radius: 0.4em;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 1em;
+  vertical-align: middle;
 }
 
+.product-page {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+}
+
+.product {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border: 1px solid rgb(255, 0, 149);
+    padding: 10px;
+    align-items: center;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.product h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.product p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
 /* Footer */
 footer {
     background: #fde8ef;
