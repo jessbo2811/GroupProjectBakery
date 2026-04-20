@@ -1,13 +1,22 @@
 body {
-    font-family: verdana;
+    font-family:'Inter', serif;
     font-size: 20px;
     background-color: #ffe5ec
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  color: #b76e79;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: #b76e79;
 }
 
 .topnav {
   background-color: #ffb3c6;
   overflow: hidden;
-  align-content: center;
   align-content: center;
 }
 
@@ -408,12 +417,12 @@ footer {
     box-shadow: 0 10px 30px rgba(183, 110, 121, 0.15);
 }
 
-    /*Headings*/
-    .payment-page h2{
-        font-family:'Playfair Display', serif;
-        color: #b76e79;
-        margin-bottom: 20px;
-    }
+  /*Headings*/
+  .payment-page h2{
+      font-family:'Playfair Display', serif;
+      color: #b76e79;
+      margin-bottom: 20px;
+  }
 
 /*Form*/
 .payment-page #payment-form{

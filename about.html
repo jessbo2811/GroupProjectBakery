@@ -1,7 +1,28 @@
-@ -6,6 +6,23 @@
+        <!DOCTYPE html>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="normalize" href="normalize.css">
+        <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Petal Bakes</title>
         <link rel="stylesheet" href="stylesheet.css">
         <link rel="normalize" href="normalize.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel=" stylesheet">
+        <script src="catering.js"></script><!--K-->
+    </head>
+    <body>
+        <div id="mainheader">
+            <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" height="200px">
+            <div class="topnav">
+                <a href="payment.html">Payment</a>
+                <a class="active" href="index.html">Home</a>
+                <a href="product.html">Products</a> <!-- Testing -->
+                <a href="catering.html">Catering</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
         <script>
         document.addEventListener("DOMContentLoaded", function() {
             const galleryLinks = document.querySelectorAll("#gallery a");
@@ -21,10 +42,6 @@
         </script>
     </head>
     <body>
-        <div id="mainheader">
-@ -18,7 +35,8 @@
-                <a href="about.html">About</a>
-            </div>
         </div>
 
     <div class="grid-container">
@@ -32,7 +49,6 @@
         <p><b>OUR STORY</b></p>
         <p>Petal bakes was created with a simple idea: to make freshly-baked high quality treats more accessible and convenient for everyone. Inspired by the comfort and joy that baked goods bring, our bakery was founded to combine traditional baking with the ease of online ordering. We believe that everyone should be able to enjoy delicious,
         handcrafted pastries without having to leave the comfort of your own home.</p>
-@ -26,8 +44,9 @@
 
         <p><b> OUR MISSION </b> </p>
         <p>Our mission is to deliver hand-crafted baked goods directly to your doorsteps with just a few clicks. You can enjoy
@@ -44,7 +60,6 @@
         <p><b>OUR VALUES</b></p>
     <ul>
             <li><b>Quality</b> - We use carefully selected, high-quality ingredients to ensure our bakes are as good as they look.</li>
-@ -37,12 +56,53 @@
             a delightful experience.</li>
             <li><b>Sustainability</b> - We are passionate about protecting our environment. Where possible, we make an effort to use
             responsibly sourced ingredients and eco-friendly packaging to reduce waste and minimise environmental impact.</li>
