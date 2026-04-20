@@ -5,78 +5,94 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Petal Bakes</title>
         <link rel="stylesheet" href="stylesheet.css">
-        <link rel="normalize" href="normalize.css">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel=" stylesheet">
+        <link rel="stylesheet" href="normalize.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     </head>
-    <body>
-    <div id="wrapper">
-        <div id="mainheader">
-            <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" height="200px">
-            <div class="topnav">
-                <a href="payment.html">Payment</a>
-                <a class="active" href="index.html">Home</a>
-                <a href="product.html">Products</a>
-                <a href="catering.html">Catering</a>
-                <a href="contact.html">Contact</a>
-                <a href="about.html">About</a>
-            </div>
-    <div class="boxheading">
-            <h3>Our Products</h3>
-        <br>
-        <div class="product-page">
-            <div class="product">
-                <img src="images/product1.jpg" alt="Product 1">
-                <h4>Product 1</h4>
-                <p>Description of Product 1</p>
-                <p>Price: £10.99</p>
-                <button class="catering-promobtn"><a href="catering.html">Add to cart</a></button>
-            </div>
-            
-            <div class="product">
-                <img src="images/product2.jpg" alt="Product 2">
-                <h4>Product 2</h4>
-                <p>Description of Product 2</p>
-                <p>Price: £12.99</p>
-                <button class="catering-promobtn"><a href="catering.html">Add to cart</a></button>
+    
+    <body class="product-body">
+        <div id="wrapper">
+
+            <div id="mainheader">
+                <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" style="height: 200px;">
+                <div class="topnav">
+                    <a href="payment.html">Payment</a>
+                    <a class="active" href="index.html">Home</a>
+                    <a href="product.html">Products</a>
+                    <a href="catering.html">Catering</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="about.html">About</a>
+                </div>
             </div>
 
-            <div class="index-catering">
-                <h3>🌸Catering Available Here🌸</h3>
-                <p> Want to have a selection of our delicious baked goods for your event? Check out our catering options!</p>
-                <button class="catering-promobtn"><a href="catering.html">Enquire Here</a></button>
-            </div>
+            <div class="boxheading">
+                <h3>Our Products</h3>
 
-            <div class="product">
-                <img src="images/product3.jpg" alt="Product 3">
-                <h4>Product 3</h4>
-                <p>Description of Product 3</p>
-                <p>Price: £14.99</p>
-                <button class="catering-promobtn"><a href="catering.html">Add to cart</a></button>
-            </div>
-            <div class="product">
-                <img src="images/product4.jpg" alt="Product 4">
-                <h4>Product 4</h4>
-                <p>Description of Product 4</p>
-                <p>Price: £16.99</p>
-                <button class="catering-promobtn"><a href="catering.html">Add to cart</a></button>
-            </div>
-        </div>
-    </div>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="images/cookies.jpg" alt="Cookies">
+                        <div class="product-info">
+                            <h4>Cookies</h4>
+                            <p>Delicious homemade cookies, perfect for any occasion.</p>
+                            <p>Price: £10.99</p>
+                            <a class="catering-promobtn" href="catering.html">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="images/product2.jpg" alt="Product 2">
+                        <div class="product-info">
+                            <h4>Product 2</h4>
+                            <p>Description of Product 2</p>
+                            <p>Price: £12.99</p>
+                            <a class="catering-promobtn" href="catering.html">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="index-catering">
+                        <h3>🌸Catering Available Here🌸</h3>
+                        <p>Want to have a selection of our delicious baked goods for your event? Check out our catering options!</p>
+                        <a class="catering-promobtn" href="catering.html">Enquire Here</a>
+                    </div>
+
+                    <div class="product">
+                        <img src="images/product3.jpg" alt="Product 3">
+                        <div class="product-info">
+                            <h4>Product 3</h4>
+                            <p>Description of Product 3</p>
+                            <p>Price: £14.99</p>
+                            <a class="catering-promobtn" href="catering.html">Add to cart</a>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <img src="images/product4.jpg" alt="Product 4">
+                        <div class="product-info">
+                            <h4>Product 4</h4>
+                            <p>Description of Product 4</p>
+                            <p>Price: £16.99</p>
+                            <a class="catering-promobtn" href="catering.html">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.boxheading -->
+
+        </div><!-- /#wrapper -->
+
         <footer>
-    <div class="footer">
-        <h4>Petal Bakes</h4>
-        <p>Handmade bakes, freshly made in Brighton, Sussex.</p>
-    </div>
-    <div class="footer">
-        <h4>Contact</h4>
-        <a href="contact.html">Contact Form</a>
-        <p>01273 000 000</p>
-        <a href="#">Instagram</a>
-        <a href="#">Facebook</a>
-        <a href="#">TikTok</a>
-    </div>
-</footer>
-<small>&copy; 2026, Petal Bakes</small>
-   
+            <div class="footer">
+                <h4>Petal Bakes</h4>
+                <p>Handmade bakes, freshly made in Brighton, Sussex.</p>
+            </div>
+            <div class="footer">
+                <h4>Contact</h4>
+                <a href="contact.html">Contact Form</a>
+                <p>01273 000 000</p>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">TikTok</a>
+            </div>
+        </footer>
+        <small>&copy; 2026, Petal Bakes</small>
+
     </body>
 </html>

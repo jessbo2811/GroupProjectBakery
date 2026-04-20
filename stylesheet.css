@@ -1,7 +1,10 @@
 body {
     font-family:'Inter', serif;
     font-size: 20px;
-    background-color: #ffe5ec
+    background-color: #ffe5ec;
+    background-image: url("https://www.transparenttextures.com/patterns/flowers.png"),
+        linear-gradient(to bottom, #fff7fa, #ffeef3);
+    background-attachment: fixed;
 }
 
 h2 {
@@ -56,6 +59,8 @@ img {
   font-size: 16px;
   margin-left: 10px;
   vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .catering-promobtn:hover {
@@ -63,7 +68,6 @@ img {
 }
 
 .boxheading {
-    height: 200px;
     border: 1px solid rgb(255, 0, 149);
     padding: 10px;
     margin: 10px;
@@ -159,7 +163,7 @@ img {
     padding: 10px;
   }
 
-  .index-catering {
+  .gdimagebanner .index-catering {
     grid-area: index-catering;
     text-align: center;
     padding: 30px;
@@ -285,8 +289,11 @@ footer {
     flex-wrap: wrap;
 }
 
-/*Product page */
-.product-page {
+body.product-body {
+    color: #2d1e1e;
+}
+
+.product-grid {
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -298,8 +305,10 @@ footer {
     flex-direction: row;
     gap: 20px;
     border: 1px solid rgb(255, 0, 149);
-    padding: 10px;
+    border-radius: 8px;
+    padding: 15px;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .product img {
@@ -307,18 +316,33 @@ footer {
     height: 200px;
     border-radius: 10px;
     object-fit: cover;
+    flex-shrink: 0;
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .product h4 {
     font-size: 18px;
-    margin-bottom: 8px;
+    margin: 0;
 }
 
 .product p {
     font-size: 14px;
-    margin-bottom: 8px;
+    margin: 0;
 }
 
+.index-catering {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid rgb(255, 0, 149);
+    border-radius: 8px;
+    background-color: rgba(255, 179, 198, 0.3);
+}
 
 .cal-header {
     display: flex;
@@ -355,21 +379,18 @@ footer {
 .legend-available   { color: green; }
 .legend-booked      { color: red; }
 
-
 #catering-date {
     display: none;
 }
 .cal-day span {
     pointer-events: none;
 }
+
 /*===PETAL BAKES FINAL CHECKOUT====*/
 .payment-page{
-
     font-family: 'Inter', sans-serif;
-    background:
-    url("https://www.transparenttextures.com/patterns/flowers.png"),
-    linear-gradient(to bottom, #fff7fa, #ffeef3);
-    color:#2d1e1e;}
+    color:#2d1e1e;
+}
 
 /*Header*/
 .payment-page .mainheader {
@@ -378,7 +399,6 @@ footer {
     align-items: center;
     max-width: 1000px;
     margin: 20px auto;
-
 }
 
 .payment-page .logo{
@@ -388,25 +408,25 @@ footer {
     text-decoration: none;
     color: #b76e79;
     font-weight: 500;
-
 }
 .payment-page .back-link:hover{
-    color: #ec4899
-
+    color: #ec4899;
 }
+
 /*Layout*/
 .payment-page .checkout-container {
-  display: flex;
+    display: flex;
     max-width: 1000px;
     margin: 40px auto;
     gap: 50px;
-    padding:20px;
-
+    padding: 20px;
 }
+
 /*left*/
 .payment-page .checkout-left{
     flex: 1;
 }
+
 /*Right*/
 .payment-page .checkout-right {
     width: 320px;
@@ -417,24 +437,24 @@ footer {
     box-shadow: 0 10px 30px rgba(183, 110, 121, 0.15);
 }
 
-  /*Headings*/
-  .payment-page h2{
-      font-family:'Playfair Display', serif;
-      color: #b76e79;
-      margin-bottom: 20px;
-  }
+/*Headings*/
+.payment-page h2{
+    font-family:'Playfair Display', serif;
+    color: #b76e79;
+    margin-bottom: 20px;
+}
 
 /*Form*/
 .payment-page #payment-form{
-     background: #ffffff;
+    background: #ffffff;
     padding: 25px;
     border-radius: 14px;
     border:1px solid #f3d6dc;
     box-shadow: 0 10px 30px rgba(183, 110, 121, 0.12);
 }
+
 /*Inputs*/
 .payment-page input{
-
     width: 100%;
     padding: 14px;
     margin-bottom:14px;
@@ -443,21 +463,21 @@ footer {
     font-size:14px;
     box-sizing: border-box;
 }
+
 /*Focus*/
 .payment-page input:focus{
     outline: none;
     border-color: #f472b6;
     box-shadow: 0 0 0 3px rgba(224, 114, 182, 0.2);
 }
+
 /*Row*/
 .payment-page .row{
     display: flex;
     gap: 10px;
-
-
 }
-/*Button*/
 
+/*Button*/
 .payment-page button{
     width: 100%;
     padding: 15px;
@@ -469,23 +489,33 @@ footer {
     cursor: pointer;
 }
 
-
 .payment-page button:hover{
     background: linear-gradient(135deg, #F472b6, #ec4899);
 }
+
 /*Message*/
 .payment-page #message {
     margin-top: 15px;
     text-align: center;
     color: #b76e79;
-
 }
+
 /*Mobile*/
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .payment-page .checkout-container {
         flex-direction: column;
     }
     .payment-page .checkout-right {
         width: 100%;
+    }
+
+    .product {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product img {
+        width: 100%;
+        height: 200px;
     }
 }
