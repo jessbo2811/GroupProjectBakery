@@ -131,36 +131,44 @@ img {
     text-align: center;
     padding: 10px;
     object-fit: cover;
+    background-color: rgba(255, 179, 198, 0.3);
   }
 
   .indeximg3 {
     grid-area: indeximg3;
     text-align: center;
     padding: 10px;
+    background-color: rgba(255, 179, 198, 0.3);
   }
 
   .custom-orders {
     grid-area: custom-orders;
     text-align: center;
     padding: 30px;
+    border: 1px solid rgb(255, 0, 149);
+    border-radius: 8px;
+    background-color: rgba(255, 179, 198, 0.3);
   }
 
   .indexpromo1 {
     grid-area: indexpromo1;
     text-align: center;
     padding: 10px;
+    background-color: rgba(255, 179, 198, 0.3);
   }
 
   .indexpromo2 {
     grid-area: indexpromo2;
     text-align: center;
     padding: 10px;
+    background-color: rgba(255, 179, 198, 0.3);
   }
 
   .indexpromo3 {
     grid-area: indexpromo3;
     text-align: center;
     padding: 10px;
+    background-color: rgba(255, 179, 198, 0.3);
   }
 
   .gdimagebanner .index-catering {
@@ -168,7 +176,6 @@ img {
     text-align: center;
     padding: 30px;
   }
-  
   .grid-container {
     display: grid;
     grid-template-areas:
@@ -262,6 +269,8 @@ img {
 #gallery {
   list-style: none;
   margin: 3m;
+  text-align: center;
+  padding: 0;
 }
 
 #gallery li {

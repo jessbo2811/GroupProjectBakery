@@ -5,11 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Petal Bakes</title>
         <link rel="stylesheet" href="stylesheet.css">
-        <link rel="normalize" href="normalize.css">
+        <link rel="stylesheet" href="normalize.css">
     </head>
     <body>
     <div id="mainheader">
-        <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" height="200px">
+        <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" style="height: 200px;">
         <div class="topnav">
             <a href="payment.html">Payment</a>
             <a class="active" href="index.html">Home</a>
@@ -20,21 +20,21 @@
         </div>
     </div>
         <div class="boxheading">
-            <h3>About Petal Bakes</h3> <!-- Zainab Edit -->
+            <h3>About Petal Bakes</h3>
             What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </div>
 
         <div class="gdimagebanner">
 
             <a href="product.html"><img class="indeximg1" src="images/cookiestest.jpg" alt="Cookies"></a>
-            <div class="indeximg2" style="background-color:pink">
+            <div class="indeximg2">
                 <a href="product.html"><img src="images/bananabread.jpeg" alt="Banana Bread" style="height: 300px;"></a>
                 <h4>Banana Bread</h4>
                 <p>Home made Banana Bread with a Crumble top</p>
             </div>
-            <div class="indeximg3" style="background-color:pink">
+            <div class="indeximg3">
                 <a href="product.html"><img src="images/raspcookies.jpeg" alt="Cookies" style="height: 300px;"></a>
-                <h4>Raspberry & White Chocolate Cookies</h4>
+                <h4>Raspberry &amp; White Chocolate Cookies</h4>
                 <p>Home made Cookies with fresh raspberries and white chocolate</p>
             </div>    
 
@@ -45,17 +45,17 @@
                 </p>
             </div>
 
-            <div class="indexpromo1" style="background-color:pink">
-                    <a href="product.html"><img src="images/cinnamonbuns.jpeg" alt="Cinnamon Buns" style="height: 300px;"></a>
-                    <h4>Cinnamon Buns </h4>
-                    <p>Home made cinnamon buns with a sweet glaze on top</p>
+            <div class="indexpromo1">
+                <a href="product.html"><img src="images/cinnamonbuns.jpeg" alt="Cinnamon Buns" style="height: 300px;"></a>
+                <h4>Cinnamon Buns</h4>
+                <p>Home made cinnamon buns with a sweet glaze on top</p>
             </div>
-            <div class="indexpromo2" style="background-color:pink">
+            <div class="indexpromo2">
                 <a href="product.html"><img src="images/chocolatecake.jpeg" alt="Chocolate Cake" style="height: 300px;"></a>
                 <h4>Chocolate Cake</h4>
                 <p>Home made chocolate cake that keeps you wanting to go for more</p>
             </div>
-            <div class="indexpromo3" style="background-color:pink">
+            <div class="indexpromo3">
                 <a href="product.html"><img src="images/selection-cookies.jpeg" alt="Selection of Cookies" style="height: 300px;"></a>
                 <h4>Selection of Cookies</h4>
                 <p>Home made cookies with a selection of flower designs (made to order)</p>
@@ -63,30 +63,24 @@
         
             <div class="index-catering">
                 <h3>🌸Catering Available Here🌸</h3>
-                <button class="catering-promobtn"><a href="catering.html">Enquire Here</a></button>
+                <a class="catering-promobtn" href="catering.html">Enquire Here</a>
             </div>
         </div>
-       <footer>
-    <div class="footer">
-        <h4>Petal Bakes</h4>
-        <p>Handmade bakes, freshly made in Brighton, Sussex.</p>
-    </div>
-    <div class="footer">
-        <h4>Contact</h4>
-        <a href="contact.html">Contact Form</a>
-        <p>01273 000 000</p>
-        <a href="#">Instagram</a>
-        <a href="#">Facebook</a>
-        <a href="#">TikTok</a>
-    </div>
-</footer>
-<small>&copy; 2026, Petal Bakes</small>
-// added order summary
-    localStorage.setItem("cart",JSON.stringify([
-    {name: "Chocolate chip cookies", price: 14.00, qty: 1},
-    {name: "Raspberry cookies", price: 14.00, qty: 1},
-    {name: "Banana Bread", price: 14.00, qty: 1}
-    ]));
-    </body>
 
+       <footer>
+            <div class="footer">
+                <h4>Petal Bakes</h4>
+                <p>Handmade bakes, freshly made in Brighton, Sussex.</p>
+            </div>
+            <div class="footer">
+                <h4>Contact</h4>
+                <a href="contact.html">Contact Form</a>
+                <p>01273 000 000</p>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">TikTok</a>
+            </div>
+        </footer>
+        <small>&copy; 2026, Petal Bakes</small>
+    </body>
 </html>
