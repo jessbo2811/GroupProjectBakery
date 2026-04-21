@@ -258,7 +258,13 @@ img {
     grid-area: index-team;
   }
 
-.catering-example .catering-form {
+.catering-form {
+    background-color: rgba(255, 179, 198, 0.3);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.catering-example {
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
 }
