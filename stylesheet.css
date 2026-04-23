@@ -226,11 +226,33 @@ img {
   display: block;
 }
 
+/* Grid-system for about */
+
+.gd-about {
+    display: grid;
+    grid-template-areas:
+    "gd-about-header gd-about-header"
+    "gd-about-content gd-about-content"
+    "gd-about-content2 gd-about-content2"
+    "gd-about-team gd-about-team";
+    grid-template-columns: 2fr 2fr;
+    gap: 3rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+/* Grid-system for catering */
+
   .gdimagebanner .index-catering {
     grid-area: index-catering;
     text-align: center;
     padding: 30px;
   }
+
+  /* Grid-system for index page */
+  
   .grid-container {
     display: grid;
     grid-template-areas:
