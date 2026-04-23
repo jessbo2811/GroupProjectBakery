@@ -1,9 +1,9 @@
+/* || General Styles (styles that apply to multiple pages) */
 body {
     font-family:'Inter', serif;
     font-size: 20px;
     background-color: #ffe5ec;
-    background-image: url("https://www.transparenttextures.com/patterns/flowers.png"),
-        linear-gradient(to bottom, #fff7fa, #ffeef3);
+    background-image: url("https://www.transparenttextures.com/patterns/flowers.png"), linear-gradient(to bottom, #fff7fa, #ffeef3);
     background-attachment: fixed;
 }
 
@@ -17,10 +17,123 @@ h3 {
     color: #b76e79;
 }
 
-.topnav {
+footer {
+    background: #fde8ef;
+    border-top: 1px solid #f4a7bf;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+button, .link-btn {
+  display: inline-block;
+  background-color: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+button, .link-btn :hover {
+  background-color: #ff1493;
+}
+
+.link-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.catering-ad {
+    grid-area: catering-ad;
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border: 1px solid rgb(255, 0, 149);
+    border-radius: 8px;
+    background-color: rgba(255, 179, 198, 0.3);
+}
+
+/* || Nav Bar */
+
+.top-nav {
   background-color: #ffb3c6;
   overflow: hidden;
   align-content: center;
+}
+
+/* || Home Page Grid Container */
+
+.gd-index {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+    "index-aboutus index-aboutus index-aboutus"
+    "index-img1 index-img2 index-img3"
+    "index-cust-orders index-cust-orders index-cust-orders"
+    "index-promo1 index-promo2 index-promo3"
+    "catering-ad catering-ad catering-ad";
+    gap: 3rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.index-img1 { grid-area: index-img1; }
+.index-img2 { grid-area: index-img2; }
+.index-img3 { grid-area: index-img3; }
+
+.index-img1, .index-img2, .index-img3 {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 179, 198, 0.3);
+}
+
+.index-img1 img, .index-img2 img, .index-img3 img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    display: block;
+}
+
+.index-cust-orders {
+    grid-area: index-cust-orders;
+    text-align: center;
+    padding: 30px;
+    border: 1px solid rgb(255, 0, 149);
+    border-radius: 8px;
+    background-color: rgba(255, 179, 198, 0.3);
+}
+
+.index-promo1 {grid-area: index-promo1;}
+.index-promo2 {grid-area: index-promo2;}
+.index-promo3 {grid-area: index-promo3;}
+
+.index-promo1, .index-promo2, .index-promo3 {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 179, 198, 0.3);
+}
+
+.index-promo1 img, .index-promo2 img, .index-promo3 img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    display: block;
 }
 
 .contact-form {
@@ -76,7 +189,7 @@ input {
     margin: 0;
 }
 
-.topnav a {
+.top-nav a {
   float: right;
   color: #f2f2f2;
   text-align: center;
@@ -85,7 +198,7 @@ input {
   font-size: 17px;
 }
 
-.topnav a:hover {
+.top-nav a:hover {
   background-color: #ffc2d1;
   color: white;
 }
@@ -105,7 +218,7 @@ img {
   padding-left: 20%;
 }
 
-.catering-promobtn {
+/* .catering-promobtn {
   display: inline-block;
   background-color: #ff69b4;
   color: white;
@@ -118,11 +231,11 @@ img {
   vertical-align: middle;
   text-decoration: none;
   white-space: nowrap;
-}
+} 
 
 .catering-promobtn:hover {
   background-color: #ff1493;
-}
+} */
 
 .boxheading {
     border: 1px solid rgb(255, 0, 149);
@@ -163,68 +276,12 @@ img {
 	clear: both;
    }
 
-  .gdimagebanner {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto auto auto;
-    grid-template-areas:
-    "index-aboutus index-aboutus index-aboutus"
-    "indeximg1 indeximg2 indeximg3"
-    "custom-orders custom-orders custom-orders"
-    "indexpromo1 indexpromo2 indexpromo3"
-    "index-catering index-catering index-catering";
-    gap: 3rem;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 5%;
-    padding-top: 5%;
-   }
 
-.indeximg1 { grid-area: indeximg1; }
-.indeximg2 { grid-area: indeximg2; }
-.indeximg3 { grid-area: indeximg3; }
 
-.indeximg1, .indeximg2, .indeximg3 {
-  width: 100%;
-  padding: 10px;
-  background-color: rgba(255, 179, 198, 0.3);
-}
 
-.indeximg1 img,
-.indeximg2 img,
-.indeximg3 img {
-  width: 100%;
-  height: 200px; 
-  object-fit: cover; 
-  display: block;
-}
-  .custom-orders {
-    grid-area: custom-orders;
-    text-align: center;
-    padding: 30px;
-    border: 1px solid rgb(255, 0, 149);
-    border-radius: 8px;
-    background-color: rgba(255, 179, 198, 0.3);
-  }
 
-.indexpromo1 {grid-area: indexpromo1;}
-.indexpromo2 {grid-area: indexpromo2;}
-.indexpromo3 {grid-area: indexpromo3;}
 
-  .indexpromo1, .indexpromo2, .indexpromo3 {
-      width: 100%;
-      padding: 10px;
-      background-color: rgba(255, 179, 198, 0.3);
-  }
 
-  .indexpromo1 img,
-.indexpromo2 img,
-.indexpromo3 img {
-  width: 100%;
-  height: 200px; 
-  object-fit: cover; 
-  display: block;
-}
 
 /* Grid-system for about */
 
@@ -245,11 +302,7 @@ img {
 
 /* Grid-system for catering */
 
-  .gdimagebanner .index-catering {
-    grid-area: index-catering;
-    text-align: center;
-    padding: 30px;
-  }
+
 
   /* Grid-system for index page */
   
@@ -263,7 +316,7 @@ img {
     "index-products index-products"
     "index-bottom index-bottom"
     "index-promo index-promo"
-    "index-catering index-catering"
+    "catering-ad catering-ad"
     "index-about index-about2"
     "index-team index-team";
     grid-template-columns: 2fr 2fr;
@@ -350,18 +403,10 @@ img {
   border-radius: 8px;
 }
 
-  .grid-container div.index-catering {
-    grid-area: index-catering;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .catering-promobtn a {
+  /* .catering-promobtn a {
     color: white;
     text-decoration: none;
-  }
+  } */
 
   .hint {
     display: none;
@@ -393,17 +438,6 @@ img {
   border-radius: 0.4em;
 }
 
-/* Footer */
-footer {
-    background: #fde8ef;
-    border-top: 1px solid #f4a7bf;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
 
 body.product-body {
     color: #2d1e1e;
@@ -454,7 +488,7 @@ body.product-body {
     margin: 0;
 }
 
-.index-catering, .index-aboutus {
+.index-aboutus {
     text-align: center;
     padding: 30px;
     border: 1px solid rgb(255, 0, 149);
