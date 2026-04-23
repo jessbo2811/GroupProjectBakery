@@ -28,8 +28,7 @@ h3 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px black;
-    width: 400px;     
-    text-align: center;    
+    width: auto;        
 }
 
 .contact-form label {
@@ -41,7 +40,8 @@ h3 {
 .contact-form input[type="text"],
 .contact-form input[type="date"],
 .contact-form input[type="email"],
-.contact-form input[type="number"] {
+.contact-form input[type="number"],
+.contact-form input[type="radio"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -54,21 +54,6 @@ input {
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
-}
-
-#maintext button {
-    background-color: white;
-    border: 2px solid #e7e7e7;
-    color: black;
-    padding: 16px 32px;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-#maintext button:hover {
-    background-color: #e7e7e7;
 }
 
 .topnav a {
