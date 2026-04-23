@@ -28,6 +28,12 @@ footer {
     flex-wrap: wrap;
 }
 
+img { 
+    display: block;
+    margin: auto;
+    justify-content: center;
+}
+
 button, .link-btn {
   display: inline-block;
   background-color: #ff69b4;
@@ -69,9 +75,23 @@ button, .link-btn :hover {
 /* || Nav Bar */
 
 .top-nav {
-  background-color: #ffb3c6;
-  overflow: hidden;
-  align-content: center;
+    background-color: #ffb3c6;
+    overflow: hidden;
+    align-content: center;
+}
+
+.top-nav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.top-nav a:hover {
+    background-color: #ffc2d1;
+    color: white;
 }
 
 /* || Home Page Grid Container */
@@ -189,26 +209,6 @@ input {
     margin: 0;
 }
 
-.top-nav a {
-  float: right;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.top-nav a:hover {
-  background-color: #ffc2d1;
-  color: white;
-}
-
-img { 
-   display: block;
-  margin: auto;
-  justify-content: center;
-}
-
 .meet-the-team {
   display: flex;
   justify-content: center;
@@ -217,25 +217,6 @@ img {
 .productsheader {
   padding-left: 20%;
 }
-
-/* .catering-promobtn {
-  display: inline-block;
-  background-color: #ff69b4;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-left: 10px;
-  vertical-align: middle;
-  text-decoration: none;
-  white-space: nowrap;
-} 
-
-.catering-promobtn:hover {
-  background-color: #ff1493;
-} */
 
 .boxheading {
     border: 1px solid rgb(255, 0, 149);
@@ -276,13 +257,6 @@ img {
 	clear: both;
    }
 
-
-
-
-
-
-
-
 /* Grid-system for about */
 
 .gd-about {
@@ -299,10 +273,6 @@ img {
     padding-bottom: 5%;
     padding-top: 5%;
 }
-
-/* Grid-system for catering */
-
-
 
   /* Grid-system for index page */
   
@@ -403,11 +373,6 @@ img {
   border-radius: 8px;
 }
 
-  /* .catering-promobtn a {
-    color: white;
-    text-decoration: none;
-  } */
-
   .hint {
     display: none;
   }
@@ -437,7 +402,6 @@ img {
   background-color: #ff69b4;
   border-radius: 0.4em;
 }
-
 
 body.product-body {
     color: #2d1e1e;
