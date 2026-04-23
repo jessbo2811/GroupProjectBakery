@@ -28,7 +28,7 @@ h3 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px black;
-    width: auto;        
+    width: 40%;        
 }
 
 .contact-form label {
@@ -40,8 +40,7 @@ h3 {
 .contact-form input[type="text"],
 .contact-form input[type="date"],
 .contact-form input[type="email"],
-.contact-form input[type="number"],
-.contact-form input[type="radio"] {
+.contact-form input[type="number"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -49,11 +48,32 @@ h3 {
     border-radius: 5px;
 }
 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    font-family: inherit;
+}
+
 input {
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+}
+
+.radio-option label {
+    margin: 0;
 }
 
 .topnav a {
