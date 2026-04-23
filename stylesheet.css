@@ -212,7 +212,8 @@ img {
     display: grid;
     grid-template-areas:
     "gd-about-header gd-about-header"
-    "gd-about-content gd-about-content2"
+    "gd-about-content gd-about-content"
+    "gd-about-content2 gd-about-content2"
     "gd-about-team gd-about-team";
     grid-template-columns: 2fr 2fr;
     gap: 3rem;
