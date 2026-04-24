@@ -274,6 +274,11 @@ input {
     padding-top: 5%;
 }
 
+.gd-about-header { grid-area: gd-about-header;}
+.gd-about-content { grid-area: gd-about-content;}
+.gd-about-content2 { grid-area: gd-about-content2;}
+.gd-about-team { grid-area: gd-about-team;}
+
   /* Grid-system for index page */
   
   .grid-container {
@@ -316,9 +321,7 @@ input {
     
   }
 
-  .grid-container div.catering-form {
-    grid-area: catering-form;
-  }
+.catering-form { grid-area: catering-form; }
 
   .grid-container div.catering-menu {
     grid-area: catering-menu;
