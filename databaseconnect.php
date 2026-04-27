@@ -1,7 +1,5 @@
 <?php
 
-//
-
 if (isset($_POST['send-enq'])) {
     storeEnquiry();
 }
