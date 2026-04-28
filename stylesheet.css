@@ -287,10 +287,33 @@ input {
     padding-top: 5%;
 }
 
-.gd-about-header { grid-area: gd-about-header;}
-.gd-about-content { grid-area: gd-about-content;}
-.gd-about-content2 { grid-area: gd-about-content2;}
-.gd-about-team { grid-area: gd-about-team;}
+.gd-about-header {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid rgb(255, 0, 149);
+    border-radius: 8px;
+    background-color: rgba(255, 179, 198, 0.3);
+}
+.gd-about-header { 
+    grid-area: gd-about-header;
+    padding: 30px;
+    background-color: rgba(255, 179, 198, 0.3);
+    border-radius: 8px;}
+.gd-about-content { grid-area: gd-about-content;
+    padding: 30px;
+    background-color: rgba(255, 179, 198, 0.3);
+    border-radius: 8px;
+}
+.gd-about-content2 { grid-area: gd-about-content2;
+    padding: 30px;
+    background-color: rgba(255, 179, 198, 0.3);
+    border-radius: 8px;
+}
+.gd-about-team { grid-area: gd-about-team;
+    padding: 30px;
+    background-color: rgba(255, 179, 198, 0.3);
+    border-radius: 8px;}
+
 
   /* Grid-system for index page */
   
