@@ -26,8 +26,8 @@
         </div>
         <script>
         function showMember(link) {
-    document.getElementById('placeholder').src = link.href;
-    document.getElementById('placeholder').alt = link.innerText.trim();
+   document.getElementById('avatar-placeholder').src = link.href;
+    document.getElementById('avatar-placeholder').alt = link.innerText.trim();
     document.getElementById('member-desc').textContent = link.title;
 
     document.querySelectorAll('#gallery a').forEach(a => a.classList.remove('active'));
@@ -84,7 +84,7 @@
         </li>
     </ul>
 
-    <img id="placeholder" src="images/petalbakes-logo.png" alt="Logo" />
+    <img id="avatar-placeholder" src="images/petalbakes-logo.png" alt="Logo" />
     <p id="member-desc" class="member-desc"></p>
 </div>
 

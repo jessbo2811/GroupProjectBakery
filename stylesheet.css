@@ -422,6 +422,12 @@ input {
   max-width: 640px;
 }
 
+#avatar-placeholder {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+}
+
 #gallery {
   list-style: none;
   margin: 3m;
