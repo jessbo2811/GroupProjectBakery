@@ -1,4 +1,5 @@
 /* || General Styles (styles that apply to multiple pages) */
+
 body {
     font-family:'Inter', serif;
     font-size: 20px;
@@ -215,6 +216,16 @@ button, .link-btn :hover {
     object-fit: cover; 
     display: block;
 }
+.index-aboutus {
+    grid-area: index-aboutus;
+    padding: 30px;
+    background-color: rgba(255, 179, 198, 0.3);
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgb(255, 0, 149);
+}
+
+/* || Contact Form */
 
 .contact-form {
     background: #fff;
@@ -283,41 +294,7 @@ input {
     padding: 30%;
 }
 
-/* Creating Boxes Side by Side to eachother */
-.box {
-	float: left;
-	width: 25%;
-	padding: 50px;
-	border: 1px solid black;
-  }
-
-  .box2 {
-	float: left;
-	width: 50%;
-	padding: 25px;
-	border: 1px solid black;
-  }
-  
-  
-  .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-    justify-content: center;
-  }
-  .fltlt {
-	float: left;
-	margin-right: 8px;
-   }
-   .fltrt {
-	float: right;
-	margin-left: 16px;
-   }
-	.clear {
-	clear: both;
-   }
-
-/* Grid-system for about */
+/* || Grid-system for About Page */
 
 .gd-about {
     display: grid;
@@ -334,62 +311,54 @@ input {
 }
 
 .gd-about-header {
+    grid-area: gd-about-header;
     text-align: center;
     padding: 30px;
     border: 1px solid rgb(255, 0, 149);
     border-radius: 8px;
     background-color: rgba(255, 179, 198, 0.3);
 }
-.gd-about-header { 
-    grid-area: gd-about-header;
-    padding: 30px;
-    background-color: rgba(255, 179, 198, 0.3);
-    border-radius: 8px;}
-.gd-about-content { grid-area: gd-about-content;
+
+.gd-about-content { 
+    grid-area: gd-about-content;
     padding: 30px;
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
 }
-.gd-about-content2 { grid-area: gd-about-content2;
+
+.gd-about-content2 { 
+    grid-area: gd-about-content2;
     padding: 30px;
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
 }
-.gd-about-team { grid-area: gd-about-team;
+
+.gd-about-team { 
+    grid-area: gd-about-team;
     padding: 30px;
     background-color: rgba(255, 179, 198, 0.3);
-    border-radius: 8px;}
+    border-radius: 8px;
+}
 
+/* || Catering Page */
 
-  /* Grid-system for index page */
-  
-  .grid-container {
-    display: grid;
+.gd-catering {
+    display: grid;     
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-    "catering-desc catering-desc"
-    "catering-example catering-form"
-    "catering-menu catering-menu"
-    "index-desc index-subdesc"
-    "index-products index-products"
-    "index-bottom index-bottom"
-    "index-promo index-promo"
-    "catering-ad catering-ad"
-    "index-about index-about2"
-    "index-team index-team";
+    "catering-desc catering-desc catering-desc"
+    "catering-example catering-example catering-form"
+    "catering-menu-sweet catering-menu-savoury catering-menu-ss";
     grid-template-columns: 2fr 2fr;
     gap: 3rem;
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 5%;
     padding-top: 5%;
-  }
+}
 
-  .grid-container div {
-    background-color:#ffc2d1;
-    padding: 10px;
-  }
-
-  .grid-container div.catering-desc {
+.catering-desc {
     grid-area: catering-desc;
     text-align: center;
     padding: 30px;
@@ -398,71 +367,47 @@ input {
     background-color: rgba(255, 179, 198, 0.3);
   }
 
-  .grid-container div.catering-example {
-    grid-area: catering-example;
-    
-  }
-
-.catering-form { grid-area: catering-form; }
-
-  .grid-container div.catering-menu {
-    grid-area: catering-menu;
-  }
-
-  .grid-container div.index-desc {
-    grid-area: index-desc;
-  }
-
-  .grid-container div.index-subdesc {
-    grid-area: index-subdesc;
-  }
-
-  .grid-container div.index-products {
-    grid-area: index-products;
-  }
-
-  .grid-container div.index-promo {
-    grid-area: index-promo;
-  }
-
-  .grid-container div.index-bottom {
-    grid-area: index-bottom;
-  }
-
-  .grid-container div.index-about {
-    grid-area: index-about;
-  }
-
-  .grid-container div.index-about2 {
-    grid-area: index-about2;
-  }
-
-  .grid-container div.index-team {
-    grid-area: index-team;
-  }
-
-.catering-form {
+.catering-menu-sweet { 
+    grid-area: catering-menu-sweet;
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
+    padding: 20px;
+}
+
+.catering-menu-savoury { 
+    grid-area: catering-menu-savoury;
+    background-color: rgba(255, 179, 198, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.catering-menu-ss { 
+    grid-area: catering-menu-ss;
+    background-color: rgba(255, 179, 198, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.catering-form {
+    grid-area: catering-form; 
+    background-color: rgba(255, 179, 198, 0.3);
+    border-radius: 8px;
+    padding: 20px;
 }
 
 .catering-example {
+    grid-area: catering-example;
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
-}
-
-.index-aboutus {
-  grid-area: index-aboutus;
-  padding: 30px;
-  background-color: rgba(255, 179, 198, 0.3);
-  border-radius: 8px;
+    padding: 20px;
 }
 
   .hint {
     display: none;
   }
 
-/* Image Gallery */
+/* || Image Gallery */
+
 #placeholder {
   width: 80%;
   max-width: 640px;
@@ -546,14 +491,6 @@ body.product-body {
 .product .selection-ad {
     margin-top: 10px;
     align-self: flex-start;
-}
-
-.index-aboutus {
-    text-align: center;
-    padding: 30px;
-    border: 1px solid rgb(255, 0, 149);
-    border-radius: 8px;
-    background-color: rgba(255, 179, 198, 0.3);
 }
 
 .cal-header {
