@@ -7,14 +7,9 @@ body {
     background-attachment: fixed;
 }
 
-h2 {
+h2, h3 {
   font-family: 'Playfair Display', serif;
   color: #b76e79;
-}
-
-h3 {
-    font-family: 'Playfair Display', serif;
-    color: #b76e79;
 }
 
 footer {
@@ -26,6 +21,12 @@ footer {
     align-items: flex-start;
     gap: 2rem;
     flex-wrap: wrap;
+}
+
+.footer-links { 
+    text-decoration: none;
+    display:block;
+    color: #b76e79; 
 }
 
 img { 
