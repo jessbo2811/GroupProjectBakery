@@ -25,13 +25,19 @@ footer {
 
 .footer-links { 
     text-decoration: none;
-    display:block;
+    display: block;
     color: #b76e79; 
+}
+
+.icons-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 100px;
 }
 
 img { 
     display: block;
-    margin: auto;
     justify-content: center;
 }
 
@@ -87,6 +93,11 @@ button, .link-btn :hover {
     background-color: rgba(255, 179, 198, 0.3);
 }
 /* || Nav Bar */
+
+#mainheader img {
+    display: block;
+    margin: auto;
+}
 
 .top-nav {
     background-color: #ffb3c6;
