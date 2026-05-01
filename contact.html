@@ -22,7 +22,7 @@
                 <a href="about.html">About</a>
             </div>
         </div>
-        <p>Contact page</p>
+        <div class="gd-contact-form">
         <form method="POST" action="contact.php" target="_self" class="contact-form">
             <label for="email">Email:</label>
             <span id="hint_email" class="hint"> - please enter your email</span><!--K-->
@@ -31,15 +31,15 @@
             <label for="enquiry-subject">What is your Enquiry About?:</label>
             <span id="hint_enquirySubject" class="hint"> - please select an option</span><!--K-->
             <div class="radio-option">
-                <input type="radio" id="delivery-enq" name="enquiry-subject" value="DELIVERY">
+                <input type="radio" id="delivery-enq" name="enquirysubject" value="DELIVERY">
                 <label for="delivery-enq">Our Delivery Service</label>
             </div>
             <div class="radio-option">
-                <input type="radio" id="catering-enq" name="enquiry-subject" value="CATERING">
+                <input type="radio" id="catering-enq" name="enquirysubject" value="CATERING">
                 <label for="catering-enq">Catering Services</label>
             </div>
             <div class="radio-option">
-                <input type="radio" id="other-enq" name="enquiry-subject" value="OTHER">
+                <input type="radio" id="other-enq" name="enquirysubject" value="OTHER">
                 <label for="other-enq">Other</label>
             </div>
             <br>
@@ -48,7 +48,11 @@
             <br><!--K-->
             <button id="send-enq" type="submit" name="send-enq">Send Enquiry</button><!--K-->
         </form>
-                <footer>
+        <div class="contact-about"> 
+            <p>Contact us :P</p>
+        </div>
+
+            <footer>
             <div class="footer">
                 <h3><a class="footer-links" href="catering.html">Catering</a></h3>
                 <h3><a class="footer-links" href="product.html">Product</a></h3>
