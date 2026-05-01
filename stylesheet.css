@@ -30,6 +30,11 @@ footer {
     color: #b76e79; 
 }
 
+.footer-links:hover {
+    color: #ff69b4;           
+    transition: color 0.3s ease; 
+}
+
 .icons-footer {
     display: flex;
     align-items: center;
@@ -60,6 +65,7 @@ button, .link-btn {
 
 button, .link-btn :hover {
   background-color: #ff1493;
+  transition: color 0.3s ease; 
 }
 
 .link-btn a {
@@ -120,6 +126,7 @@ button, .link-btn :hover {
 .top-nav a:hover {
     background-color: #ffc2d1;
     color: white;
+    transition: color 0.3s ease; 
 }
 
 /* || Shopping Cart */
@@ -565,6 +572,7 @@ body.product-body {
 }
 .payment-page .back-link:hover{
     color: #ec4899;
+    transition: color 0.3s ease; 
 }
 
 .payment-page .checkout-container {
@@ -636,6 +644,7 @@ body.product-body {
 
 .payment-page button:hover{
     background: linear-gradient(135deg, #F472b6, #ec4899);
+    transition: color 0.3s ease; 
 }
 
 .payment-page #message {
