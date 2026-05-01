@@ -235,6 +235,33 @@ button, .link-btn :hover {
 
 /* || Contact Form */
 
+.gd-contact-form {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "contact-form contact-about";
+    gap: 3rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.contact-aboutus {
+    grid-area: contact-about;
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border: 1px solid rgb(255, 0, 149);
+    border-radius: 8px;
+    background-color: rgba(255, 179, 198, 0.3);
+}
+
 .contact-form {
     background: #fff;
     padding: 20px;
@@ -243,13 +270,6 @@ button, .link-btn :hover {
     width: 40%;        
 }
 
-.contact-form label {
-    display: flex;        
-    align-items: center; 
-    margin-bottom: 10px;            
-}
-
-.contact-form input[type="text"],
 .contact-form input[type="date"],
 .contact-form input[type="email"],
 .contact-form input[type="number"] {
@@ -275,6 +295,37 @@ input {
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #f0a0c0;
+    border-radius: 5px;
+    box-sizing: border-box; /* stops them overflowing the form */
+}
+
+.contact-form label {
+    font-weight: bold;
+    display: flex;        
+    align-items: center; 
+    margin-bottom: 10px;      
+}
+
+#send-enq {
+    background-color: #e91e8c; /* that pink colour */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#send-enq:hover {
+    opacity: 0.85;
 }
 
 .hint {

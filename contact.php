@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST['send-enq'])) {
+if (isset($_POST['send_enq'])) {
     storeEnquiry();
 }
 
@@ -31,13 +31,13 @@ function storeEnquiry(){
 
     $enquiryID = $currentMaxEnquiryID + 1;
     $email = improve_input($_POST['email']);
-    $enquirySubject = improve_input($_POST['enquiry_subject'] ?? '');
+    $enquirySubject = improve_input($_POST['enquirysubject'] ?? '');
     $enquiry = improve_input($_POST['enquiry']);
 
     echo "<p>Attempting to insert comment on $enquiryID</p>";
 
     $insertDataEnquirySQL = "INSERT INTO tEnquiry (enquiryID, enquiryEmail, enquirySubject, enquiry)
-                             VALUES ($enquiryID, '$email', '$enquirySubject', '$enquiry')";
+                             VALUES ($enquiryID, '$email', '$enquirysubject', '$enquiry')";
 
     if ($mysqli->query($insertDataEnquirySQL) === TRUE) {
         echo "Enquiry added to database";
