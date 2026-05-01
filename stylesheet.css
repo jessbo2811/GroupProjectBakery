@@ -270,6 +270,10 @@ input {
     border-radius: 5px;
 }
 
+.hint {
+    display: none;
+}
+
 .radio-option {
     display: flex;
     align-items: center;
@@ -403,10 +407,6 @@ input {
     padding: 20px;
 }
 
-  .hint {
-    display: none;
-  }
-
 /* || Image Gallery */
 
 #placeholder {
@@ -439,6 +439,8 @@ input {
   background-color: #ff69b4;
   border-radius: 0.4em;
 }
+
+/* || Product Page */
 
 body.product-body {
     color: #2d1e1e;
@@ -494,6 +496,8 @@ body.product-body {
     align-self: flex-start;
 }
 
+/* || Catering Calendar */
+
 .cal-header {
     display: flex;
     align-items: center;
@@ -536,13 +540,13 @@ body.product-body {
     pointer-events: none;
 }
 
-/*===PETAL BAKES FINAL CHECKOUT====*/
+/* || Checkout Page */
+
 .payment-page{
     font-family: 'Inter', sans-serif;
     color:#2d1e1e;
 }
 
-/*Header*/
 .payment-page .mainheader {
     display: flex;
     justify-content: space-between;
@@ -563,7 +567,6 @@ body.product-body {
     color: #ec4899;
 }
 
-/*Layout*/
 .payment-page .checkout-container {
     display: flex;
     max-width: 1000px;
@@ -572,12 +575,10 @@ body.product-body {
     padding: 20px;
 }
 
-/*left*/
 .payment-page .checkout-left{
     flex: 1;
 }
 
-/*Right*/
 .payment-page .checkout-right {
     width: 320px;
     background: #ffffff;
@@ -587,14 +588,12 @@ body.product-body {
     box-shadow: 0 10px 30px rgba(183, 110, 121, 0.15);
 }
 
-/*Headings*/
 .payment-page h2{
     font-family:'Playfair Display', serif;
     color: #b76e79;
     margin-bottom: 20px;
 }
 
-/*Form*/
 .payment-page #payment-form{
     background: #ffffff;
     padding: 25px;
@@ -603,7 +602,6 @@ body.product-body {
     box-shadow: 0 10px 30px rgba(183, 110, 121, 0.12);
 }
 
-/*Inputs*/
 .payment-page input{
     width: 100%;
     padding: 14px;
@@ -614,20 +612,17 @@ body.product-body {
     box-sizing: border-box;
 }
 
-/*Focus*/
 .payment-page input:focus{
     outline: none;
     border-color: #f472b6;
     box-shadow: 0 0 0 3px rgba(224, 114, 182, 0.2);
 }
 
-/*Row*/
 .payment-page .row{
     display: flex;
     gap: 10px;
 }
 
-/*Button*/
 .payment-page button{
     width: 100%;
     padding: 15px;
@@ -643,14 +638,12 @@ body.product-body {
     background: linear-gradient(135deg, #F472b6, #ec4899);
 }
 
-/*Message*/
 .payment-page #message {
     margin-top: 15px;
     text-align: center;
     color: #b76e79;
 }
 
-/*Mobile*/
 @media (max-width: 768px) {
     .payment-page .checkout-container {
         flex-direction: column;
