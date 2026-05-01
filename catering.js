@@ -160,10 +160,25 @@ window.addEventListener('load', function() {
         }
 
         if (fieldsOK) {
-            console.log('Email: ' + cateringEmail);
-            console.log('Menu Choice: ' + selectedMenuChoice);
-            console.log('Date: ' + cateringDate);
+            const formData = new FormData();
+            formData.append('email', cateringEmail);
+            formData.append('menu-choice', selectedMenuChoice);
+            formData.append('catering-date', cateringDate);
+
+            fetch('book_catering.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Booking confirmed!');
+                } else {
+                    alert('Error: ' + data.message);
+                }
+            })
+            .catch(err => console.error('Fetch error:', err));
         }
-    });
+            });
 
 });
