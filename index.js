@@ -16,7 +16,7 @@ window.addEventListener('load', function() {
 
         e.preventDefault();
 
-        const enquirySubject = form.querySelector("input[name='enquiry-subject']:checked");
+        const enquirySubject = form.querySelector("input[name='enquirysubject']:checked");
 
         const enquiryEmail = email.value.trim();
         const selectedEnquirySubject = enquirySubject ? enquirySubject.value : null;
