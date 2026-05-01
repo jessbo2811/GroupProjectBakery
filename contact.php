@@ -31,7 +31,7 @@ function storeEnquiry(){
 
     $enquiryID = $currentMaxEnquiryID + 1;
     $email = improve_input($_POST['email']);
-    $enquirySubject = improve_input($_POST['enquiry-subject'] ?? '');
+    $enquirySubject = improve_input($_POST['enquiry_subject'] ?? '');
     $enquiry = improve_input($_POST['enquiry']);
 
     echo "<p>Attempting to insert comment on $enquiryID</p>";
