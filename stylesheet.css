@@ -414,6 +414,34 @@ input {
     padding: 20px;
 }
 
+/* || Catering Image Carousel */
+
+#catering-placeholder{
+    width: 80%;
+    max-width: 640px;
+}
+
+#catering-images {
+list-style: none;
+margin: 3em;
+}
+#catering-images li {
+display: inline;
+margin: 1em;
+}
+
+#catering-images a {
+    text-decoration: none;
+    display: inline-block;
+    width: 6em;
+    background-color: #ff69b4;
+    border-radius: 0.4em;
+    color: white;
+    padding: 6px 14px;
+    font-size: 16px;
+}
+
+
 /* || Image Gallery */
 
 #placeholder {
