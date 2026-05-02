@@ -1,38 +1,28 @@
 window.addEventListener('load', function() {
 
-    const addProductBtn = document.querySelector('.link-btn');
+    const shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 
-    addProductBtn.addEventListener("click", function(e) {
+    const cartItems = document.querySelector("#cart-items");
+    const cartTotal = document.querySelector("#cart-total");
 
-        e.preventDefault();
+    let total = 0;
 
+    if (cartTotal === 0) {
+        cartItems.textContent = "Your Shopping Cart is Empty";
+    } else {
+        shoppingCart.forEach(item => {
+            const liItem = document.createElement("li");
+            liItem.className = 'item';
+            liItem.textContent = 'Product Name: ' + item.productName +
+                                 'Product Price: ' + item.productPrice;
+            cartItems.append(liItem);
 
-    })
+            const priceNumber = parseFloat(item.productPrice.replace("Price: £", ""));
+            total += priceNumber;
+        })
+    }
+
+    cartTotal.textContent = total.toFixed(2);
+    console.log(total);
 
 })
-
-function addProductToCart(product) {
-
-    const productName;
-    const productPrice;
-    const shoppingCart = [];
-
-    if (product.className == "name") {
-        productName = product.innerText;
-    }
-
-    if (product.className == "price") {
-        productPrice = product.innerText;
-    }
-
-    const product = {name : productName,
-                     price : productPrice
-    };
-
-    const stringProduct = JSON.stringify(product);
-
-    if (!sessionStorage.getItem('cart')) {
-
-    }
-
-}
