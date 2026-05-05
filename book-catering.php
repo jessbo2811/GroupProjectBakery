@@ -18,11 +18,11 @@ if ($mysqli->connect_errno) {
     exit();
 }
 
-$email      = htmlspecialchars(trim($_POST['email']), ENT_QUOTES); // To handle any names with an apostrophe like o'brien or something
+$email = htmlspecialchars(trim($_POST['email']), ENT_QUOTES); // To handle any names with an apostrophe like o'brien or something
 $menuChoice = htmlspecialchars(trim($_POST['menu-choice']), ENT_QUOTES);
-$date       = htmlspecialchars(trim($_POST['catering-date']), ENT_QUOTES);
+$date = htmlspecialchars(trim($_POST['catering-date']), ENT_QUOTES);
 
-$check = $mysqli->prepare("SELECT bookingID FROM tBooking WHERE bookingDate = ?");
+$check = $mysqli->prepare("SELECT cateringID FROM tCatering WHERE cateringDate = ?");
 $check->bind_param("s", $date);
 $check->execute();
 $check->store_result();
@@ -36,9 +36,10 @@ if ($check->num_rows > 0) {
 $check->close();
 
 $stmt = $mysqli->prepare("
-    INSERT INTO tBooking (bookingEmail, menuChoice, bookingDate)
+    INSERT INTO tCatering (cateringEmail, cateringMenuChoice, cateringDate)
     VALUES (?, ?, ?)
 ");
+
 $stmt->bind_param("sss", $email, $menuChoice, $date);
 
 if ($stmt->execute()) {

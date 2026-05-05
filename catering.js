@@ -2,10 +2,10 @@ window.addEventListener('load', function() {
     const form = document.querySelector('form');
 
     const email = form.querySelector('#email');
-    const hintEmail = form.querySelector('#hint_email');
-    const hintMenuChoice = form.querySelector('#hint_menuChoice');
+    const hintEmail = form.querySelector('#hint-email');
+    const hintMenuChoice = form.querySelector('#hint-menuChoice');
     const date = form.querySelector('#catering-date');
-    const hintDate = form.querySelector('#hint_date');
+    const hintDate = form.querySelector('#hint-date');
     const sendButton = form.querySelector('#send-enq');
 
     const now = new Date();
@@ -17,6 +17,7 @@ window.addEventListener('load', function() {
         let availability = {};
         try {
             const response = await fetch(`availability.php?month=${monthStr}`);
+            console.log(response.headers)
             availability = await response.json();
         } catch (err) {
             console.error('Could not load availability:', err);
