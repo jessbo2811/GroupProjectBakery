@@ -14,7 +14,7 @@ window.addEventListener('load', function() {
             const liItem = document.createElement("li");
             liItem.className = 'item';
             liItem.textContent = 'Product Name: ' + item.productName +
-                                 'Product Price: ' + item.productPrice;
+                                  ' - ' + item.productPrice;
             cartItems.append(liItem);
 
             const priceNumber = parseFloat(item.productPrice.replace("Price: £", ""));
