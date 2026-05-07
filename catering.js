@@ -164,7 +164,7 @@ window.addEventListener('load', function() {
             formData.append('menu-choice', selectedMenuChoice);
             formData.append('catering-date', cateringDate);
 
-            fetch('book_catering.php', {
+            fetch('book-catering.php', {
                 method: 'POST',
                 body: formData
             })
