@@ -45,10 +45,28 @@ window.addEventListener('load', function() {
             hintEnquiry.style.display = 'none';
         }
 
-        if(fieldsOK) {
-            console.log('Email: ' + enquiryEmail);
-            console.log('Enquiry Subject: ' + selectedEnquirySubject);
-            console.log('Enquiry: ' + enquiryText);
+        if (fieldsOK) {
+            const formData = new FormData();
+            formData.append('email', enquiryEmail);
+            formData.append('enquirysubject', selectedEnquirySubject);
+            formData.append('enquiry', enquiryText);
+            formData.append('send_enq', '1');
+
+            fetch('contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(res => res.text())
+            .then(data => {
+                form.reset();
+                const successMsg = document.createElement('p');
+                successMsg.textContent = '✓ Your enquiry has been submitted! We\'ll be in touch soon.';
+                successMsg.style.color = 'green';
+                successMsg.style.fontWeight = 'bold';
+                form.appendChild(successMsg);
+                setTimeout(() => successMsg.remove(), 5000);
+            })
+            .catch(err => console.error('Fetch error:', err));
         }
 
 

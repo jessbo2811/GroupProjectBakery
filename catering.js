@@ -164,19 +164,29 @@ window.addEventListener('load', function() {
             formData.append('menu-choice', selectedMenuChoice);
             formData.append('catering-date', cateringDate);
 
-            fetch('book-catering.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(res => res.json())
-            .then(data => {
-                if (data.success) {
-                    alert('Booking confirmed!');
-                } else {
-                    alert('Error: ' + data.message);
-                }
-            })
-            .catch(err => console.error('Fetch error:', err));
+        fetch('book-catering.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                form.reset();
+                document.getElementById('selected-date-display').textContent = 'Selected date: ';
+                
+                const successMsg = document.createElement('p');
+                successMsg.textContent = '✓ Booking confirmed! We look forward to seeing you.';
+                successMsg.style.color = 'green';
+                successMsg.style.fontWeight = 'bold';
+                form.appendChild(successMsg);
+                setTimeout(() => successMsg.remove(), 5000);
+                
+                renderCalendar(now.getFullYear(), now.getMonth());
+            } else {
+                alert('Error: ' + data.message);
+            }
+        })
+        .catch(err => console.error('Fetch error:', err));
         }
             });
 
