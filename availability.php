@@ -3,7 +3,7 @@ header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 
 // gets the current month
-$month = date('Y-m');
+$month = isset($_GET['month']) ? $_GET['month'] : date('Y-m');
 
 // Hardcoded data just for testing the calendar display
 list($year, $mon) = explode('-', $month);

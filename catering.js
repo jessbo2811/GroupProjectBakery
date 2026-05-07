@@ -2,10 +2,10 @@ window.addEventListener('load', function() {
     const form = document.querySelector('form');
 
     const email = form.querySelector('#email');
-    const hintEmail = form.querySelector('#hint-email');
-    const hintMenuChoice = form.querySelector('#hint-menuChoice');
+    const hintEmail = form.querySelector('#hint_email');
+    const hintMenuChoice = form.querySelector('#hint_menuChoice');
+    const hintDate = form.querySelector('#hint_date');
     const date = form.querySelector('#catering-date');
-    const hintDate = form.querySelector('#hint-date');
     const sendButton = form.querySelector('#send-enq');
 
     const now = new Date();
@@ -71,9 +71,7 @@ window.addEventListener('load', function() {
 
             if (isPast) {
                 cls += ' past';
-            } else if (!info || info.status === 'unavailable') {
-                cls += ' unavailable';
-            } else if (info.status === 'booked') {
+            } else if (info && Object.keys(availability).includes(dateStr)) {
                 cls += ' booked';
                 label = 'Booked';
             } else {

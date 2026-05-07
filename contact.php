@@ -35,16 +35,17 @@ function storeEnquiry(){
     $enquiry = improve_input($_POST['enquiry']);
 
     echo "<p>Attempting to insert comment on $enquiryID</p>";
+    
+    $stmt = $mysqli->prepare("INSERT INTO tEnquiry (enquiryEmail, enquirySubject, enquiry) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $email, $enquirySubject, $enquiry);
 
-    $insertDataEnquirySQL = "INSERT INTO tEnquiry (enquiryID, enquiryEmail, enquirySubject, enquiry)
-                             VALUES ($enquiryID, '$email', '$enquirysubject', '$enquiry')";
-
-    if ($mysqli->query($insertDataEnquirySQL) === TRUE) {
+    if ($stmt->execute()) {
         echo "Enquiry added to database";
     } else {
-        echo "Error: " . $mysqli->error;
+        echo "Error: " . $stmt->error;
     }
 
+    $stmt->close();
     $mysqli->close();
 }
 

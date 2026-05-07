@@ -59,13 +59,14 @@
 </div>
 
                 <p>Explore the catering menus we offer below.Choose from our savoury menu, sweet menu or a balanced mix of both, at petal bakes
-                we have something for everyone.If you're looking for high-quality, delicious baked goods delivered with friendly, efficient service, simply complete
+                we have something for everyone. </p>
+                <p>If you're looking for high-quality, delicious baked goods delivered with friendly, efficient service, simply complete
                 the enquiry form on the right and we'll be in touch as soon as possible</p> <!-- Zainab edit-->
 
             </div>
             <div class="catering-form">
                 <h2 style="text-align: center;">Book Our Catering Services Now!</h2>
-                <form style="text-align: left;">
+                <form method="POST" action="book-catering.php" style="text-align: left;">
                     <label for="email">Email:    </label>
                     <span id="hint_email" class="hint"> - please enter your email</span><!--K-->
                     <input type="text" id="email" name="email"><br>
@@ -85,7 +86,7 @@
                     <p id="selected-date-display">Selected date: </p>
                     <input type="date" id="catering-date" name="catering-date" min="" max="">
                     <br><!--K-->
-                    <button id="send-enq">Send Enquiry</button><!--K-->
+                    <button id="send-enq" type="submit" name="send_enq">Send Enquiry</button><!--K-->
                 </form>
             </div>
 

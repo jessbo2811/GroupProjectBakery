@@ -405,7 +405,7 @@ input {
 
 .gd-catering {
     display: grid;     
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
     "catering-desc catering-desc catering-desc"
@@ -413,8 +413,8 @@ input {
     "catering-menu-sweet catering-menu-savoury catering-menu-ss";
     grid-template-columns: 2fr 2fr;
     gap: 3rem;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 7%;
+    padding-right: 7%;
     padding-bottom: 5%;
     padding-top: 5%;
 }
