@@ -9,7 +9,6 @@ window.addEventListener('load', function() {
         const addProductBtn = thisProduct.querySelector(".link-btn");
 
         addProductBtn.addEventListener('click', function (e) {
-
             e.preventDefault();
 
             const productName = thisProduct.querySelector(".name").innerText;
@@ -17,10 +16,13 @@ window.addEventListener('load', function() {
 
             addToShoppingCart({productName, productPrice});
 
-            console.log(shoppingCart);
-
+            addProductBtn.textContent = '✓ Added to Cart!';
+            addProductBtn.style.backgroundColor = 'green';
+            setTimeout(() => {
+                addProductBtn.textContent = 'Add to cart';
+                addProductBtn.style.backgroundColor = '';
+            }, 2000);
         })
-    })
 
     function addToShoppingCart(product) {
 
@@ -30,4 +32,5 @@ window.addEventListener('load', function() {
 
     }
 
+})
 })

@@ -13,7 +13,7 @@ window.addEventListener('load', function() {
         shoppingCart.forEach(item => {
             const liItem = document.createElement("li");
             liItem.className = 'item';
-            liItem.textContent = 'Product Name: ' + item.productName +
+            liItem.textContent = item.productName +
                                   ' - ' + item.productPrice;
             cartItems.append(liItem);
 
