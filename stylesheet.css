@@ -403,15 +403,15 @@ input {
 
 /* || Catering Page */
 
+
 .gd-catering {
-    display: grid;     
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto auto;
     grid-template-areas:
-    "catering-desc catering-desc catering-desc"
-    "catering-example catering-example catering-form"
-    "catering-menu-sweet catering-menu-savoury catering-menu-ss";
-    grid-template-columns: 2fr 2fr;
+        "catering-desc catering-desc catering-desc"
+        "catering-example catering-example catering-form"
+        "catering-menu-sweet catering-menu-savoury catering-menu-ss";
     gap: 3rem;
     padding-left: 7%;
     padding-right: 7%;
@@ -442,7 +442,8 @@ input {
     padding: 20px;
 }
 
-.catering-menu-ss { 
+
+.catering-menu-ss {
     grid-area: catering-menu-ss;
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
