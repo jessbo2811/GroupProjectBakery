@@ -27,7 +27,7 @@
     </head>
     <body>
         <div id="mainheader">
-            <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" height="200px">
+        <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" style="height: 200px; max-width: 100%; display: block;">
             <div class="top-nav">
                 <a href="shopping-cart.html">🛒</a>
                 <a class="active" href="index.html">Home</a>
@@ -40,180 +40,143 @@
         <div class="gd-catering">
             <div class="catering-desc">
                 <h3>🌸Catering🌸</h3>
-                <p>Here at petal bakes we offer catering for a wide selection of baked goods. From sweet to savoury- we craft each item with the same immaculate attention and care that defines our bakery.
-                 Whether your hosting an intimate gathering or a large celebration- we offer services for every occasion. Whatever the event - Petal bakes catering services will guarantee to make a lasting impression as we bring comfort, flavour and beautifully made treats to your event. </p>
+                <p>Here at petal bakes we offer catering for a wide selection of baked goods. From sweet to savoury- we craft each item with the same immaculate attention and care that defines our bakery. Whether your hosting an intimate gathering or a large celebration- we offer services for every occasion. Whatever the event - Petal bakes catering services will guarantee to make a lasting impression as we bring comfort, flavour and beautifully made treats to your event.</p>
             </div>
+            
             <div class="catering-example">
-                <div class="catering-example">
-    <p>Take a look at some of the events we've catered for below:</p>
-
-<ul id="catering-images">
-    <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 1.jpeg'); return false;">Image 1</a></li>
-    <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 2.jpeg'); return false;">Image 2</a></li>
-    <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 3.jpeg'); return false;">Image 3</a></li>
-    <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 4.jpeg'); return false;">Image 4</a></li>
-</ul>
-
-<img id="catering-placeholder" src="images/Catering Img 1.jpeg" alt="Catering Picture" />
-<p>Catering Events</p>
-</div>
-
-                <p>Explore the catering menus we offer below.Choose from our savoury menu, sweet menu or a balanced mix of both, at petal bakes
-                we have something for everyone. </p>
-                <p>If you're looking for high-quality, delicious baked goods delivered with friendly, efficient service, simply complete
-                the enquiry form on the right and we'll be in touch as soon as possible</p> <!-- Zainab edit-->
-
+                <p>Take a look at some of the events we've catered for below:</p>
+                <ul id="catering-images">
+                    <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 1.jpeg'); return false;">Image 1</a></li>
+                    <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 2.jpeg'); return false;">Image 2</a></li>
+                    <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 3.jpeg'); return false;">Image 3</a></li>
+                    <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 4.jpeg'); return false;">Image 4</a></li>
+                </ul>
+                <img id="catering-placeholder" src="images/Catering Img 1.jpeg" alt="Catering Picture" />
+                <p>Catering Events</p>
+                <p>Explore the catering menus we offer below. Choose from our savoury menu, sweet menu or a balanced mix of both, at petal bakes we have something for everyone.</p>
+                <p>If you're looking for high-quality, delicious baked goods delivered with friendly, efficient service, simply complete the enquiry form on the right and we'll be in touch as soon as possible</p>
             </div>
+
             <div class="catering-form">
                 <h2 style="text-align: center;">Book Our Catering Services Now!</h2>
                 <form method="POST" action="book-catering.php" style="text-align: left;">
-                    <label for="email">Email:    </label>
-                    <span id="hint_email" class="hint"> - please enter your email</span><!--K-->
-                    <input type="text" id="email" name="email"><br>
-                    <br>
+                    <label for="email">Email:</label>
+                    <span id="hint_email" class="hint"> - please enter your email</span>
+                    <input type="text" id="email" name="email"><br><br>
                     <label for="menu-choice">Which Menu?:</label><br>
-                    <span id="hint_menuChoice" class="hint"> - please select an option</span><!--K-->
+                    <span id="hint_menuChoice" class="hint"> - please select an option</span>
                     <input type="radio" id="sweet-opt" name="menu-choice" value="Sweet">
                     <label for="sweet-opt">Sweet</label><br>
                     <input type="radio" id="savoury-opt" name="menu-choice" value="Savoury">
                     <label for="savoury-opt">Savoury</label><br>
                     <input type="radio" id="sweetnsavoury-opt" name="menu-choice" value="Sweet-Savoury">
-                    <label for="sweet-opt">Sweet and Savoury</label><br>
-                    <br>
+                    <label for="sweetnsavoury-opt">Sweet and Savoury</label><br><br>
                     <label for="catering-date">Date:</label><br>
-                    <span id="hint_date" class="hint"> - please select a suitable catering date</span><!--K-->
+                    <span id="hint_date" class="hint"> - please select a suitable catering date</span>
                     <div id="availability-calendar"></div>
                     <p id="selected-date-display">Selected date: </p>
-                    <input type="date" id="catering-date" name="catering-date" min="" max="">
-                    <br><!--K-->
-                    <button id="send-enq" type="submit" name="send_enq">Send Enquiry</button><!--K-->
+                    <input type="date" id="catering-date" name="catering-date" min="" max=""><br>
+                    <button id="send-enq" type="submit" name="send_enq">Send Enquiry</button>
                 </form>
             </div>
 
             <div class="catering-menu-sweet">
-                    <h2>Sweet Menu</h2>
-                    <!-- Zainab edit-->
-                    <p> Our sweet menu is guaranteed to satisfy every sweet-toothed guest. Take a look at our curation of sweet items:</p>
-
-                    <ul>
-                <h3><p><b>Our Mega size treats</b></p> </h3>
-
-                    <p><b> ~ SIGNATURE CAKES & TARTS ~ </b></p>
-
+                <h2>Sweet Menu</h2>
+                <p>Our sweet menu is guaranteed to satisfy every sweet-toothed guest. Take a look at our curation of sweet items:</p>
+                <ul>
+                    <h3><b>Our Mega size treats</b></h3>
+                    <p><b>~ SIGNATURE CAKES & TARTS ~</b></p>
                     <li>Vanilla sponge cake</li>
                     <li>Chocolate fudge cake</li>
-                    <li>lemon meringue tartlets</li>
+                    <li>Lemon meringue tartlets</li>
                     <li>Seasonal fruit tartlets (Vegetarian)</li>
                     <li>Vegan chocolate forest cake with berries of choosing</li>
                     <li>Vegan berry tart with dairy-free custard</li>
-
-                    <h3><p><b>Petite Petal treats</b></p></h3>
-
-                    <p><b> ~ ASSORTED CUPCAKES ~</b></p>
-
+                    <h3><b>Petite Petal treats</b></h3>
+                    <p><b>~ ASSORTED CUPCAKES ~</b></p>
                     <li>Vanilla rose-Vegetarian</li>
                     <li>Chocolate swirl-Vegetarian</li>
                     <li>Red velvet-Vegetarian</li>
                     <li>Sprinkle galore-Vegetarian</li>
-                    <li>Vegan cupcakes( Vanilla, chocolate, lemon)</li>
-
-                <p><b>~ BROWNIES & BLONDIES ~ </b></p>
+                    <li>Vegan cupcakes (Vanilla, chocolate, lemon)</li>
+                    <p><b>~ BROWNIES & BLONDIES ~</b></p>
                     <li>Dark chocolate brownies</li>
                     <li>Milk chocolate brownies</li>
                     <li>Fantastic Fudge Brownies</li>
                     <li>Classic Blondie</li>
                     <li>Biscoff Blondie brownie</li>
                     <li>Classic Vegan Brownies or Blondies</li>
-
-                <p><b> ~ DESSERT PLATTERS ~ </p></b>
+                    <p><b>~ DESSERT PLATTERS ~</b></p>
                     <li>Mini Cheesecakes with berries-vegetarian</li>
                     <li>Cake pops</li>
                     <li>Vegan mini cheesecakes</li>
-                    <li>petals pistachio tiramisu</li>
+                    <li>Petals pistachio tiramisu</li>
                     <li>Vegan cake pops</li>
-                    <li>Vegan mini cheesecakes</li>
-                    <li>Vegan cookie platter(chocolate chip, oat and raisin, double chocolate)</li>
+                    <li>Vegan cookie platter (chocolate chip, oat and raisin, double chocolate)</li>
                 </ul>
-               </div>
+            </div>
 
-               <div class="catering-menu-savoury">
+            <div class="catering-menu-savoury">
                 <h2>Savoury Menu</h2>
                 <p>This is our selection of savoury delights</p>
                 <ul>
-                    <p><b> ~ OUR FLAVOUR-FILLED SIDES ~ </b></p>
-
+                    <p><b>~ OUR FLAVOUR-FILLED SIDES ~</b></p>
                     <li>Nachos & dip- Vegetarian, Vegan, Halal</li>
-                    <li>loaded chips (peri-peri/ chicken tikka/tomato & cheese)-Halal</li>
+                    <li>Loaded chips (peri-peri/ chicken tikka/tomato & cheese)-Halal</li>
                     <li>Mini tacos (low/medium/spicy)</li>
-
-
-                    <p><b> ~ MINI PASTRIES AND BITES ~ </b></p>
-                    <li>Spinach & feta puff pastries </li>
+                    <p><b>~ MINI PASTRIES AND BITES ~</b></p>
+                    <li>Spinach & feta puff pastries</li>
                     <li>Cheese and herb scones</li>
                     <li>Mini croissants with smoked salmon and cream cheese -Halal</li>
-                    <li>Caramelised onion & cheddar tartlets - Vegetarian </li>
-
-                    <p><b> ~ WARM SAVOURY-SELECTIONS ~ </b></p>
-                    <li>Mini quiches(Lorraine, spinach & mushroom)</li>
-                    <li>Gourmet sausage rolls (Chicken or Beef)- Halal (</li>
+                    <li>Caramelised onion & cheddar tartlets - Vegetarian</li>
+                    <p><b>~ WARM SAVOURY-SELECTIONS ~</b></p>
+                    <li>Mini quiches (Lorraine, spinach & mushroom)</li>
+                    <li>Gourmet sausage rolls (Chicken or Beef)- Halal</li>
                     <li>Burrito bowls (Vegetarian/ Halal)</li>
-                    <li>Wraps- (Vegetarian/ Halal)</li>
+                    <li>Wraps (Vegetarian/ Halal)</li>
                     <li>Sandwiches (Vegetarian/ Halal)</li>
                     <li>Sausage rolls (Vegetarian/ Halal)</li>
-
-                    <p><b> ~ SHARING PLATTERS ~ </b></p>
+                    <p><b>~ SHARING PLATTERS ~</b></p>
                     <li>Charcuterie board (Halal/Vegetarian)</li>
                     <li>Savoury muffins with sun-dried tomato & basil</li>
-
-                    <b><p> ~ OUR SAVOURY VEGAN OPTIONS ~ </p></b>
+                    <p><b>~ OUR SAVOURY VEGAN OPTIONS ~</b></p>
                     <li>Mediterranean platter</li>
                     <li>Spinach & mushroom puff pastries</li>
                     <li>Mini savoury rolls with herb and vegetable filling</li>
                     <li>Roasted pepper and hummus bruschetta</li>
                     <li>Mini quiches (tofu-based filling with vegetables)</li>
                     <li>Vegan sausage rolls</li>
-
                 </ul>
-                </div>
+            </div>
 
-                <div class="catering-menu-ss">
-                    <h2>Sweet & Savoury Menu</h2>
-                    <b><p>Our sweet and savoury menu combined</p></b>
-
-
-                    <b><p>Balanced Selection- For those who like both </p></b>
-                    <ul> <li>Mini quiches- (Halal/Vegetarian)</li>
-                    <li>Sausage rolls- (Halal)</li>
-                    <li>Spinach & feta pastries- (Vegetarian)
-                    <li>Savoury rolls (Vegan)</li><!-- Zainab edit-->
-                    <li>Vanilla & Chocolate cupcakes(Vegetarian)</li>
-                    <li>Vegan cupcakes-(Vegan)</li>
-                    <li>Lemon meringue tartlets(Vegetarian)</li>
+            <div class="catering-menu-ss">
+                <h2>Sweet & Savoury Menu</h2>
+                <p>Our sweet and savoury menu combined</p>
+                <p>Balanced Selection- For those who like both</p>
+                <ul>
+                    <li>Mini quiches (Halal/Vegetarian)</li>
+                    <li>Sausage rolls (Halal)</li>
+                    <li>Spinach & feta pastries (Vegetarian)</li>
+                    <li>Savoury rolls (Vegan)</li>
+                    <li>Vanilla & Chocolate cupcakes (Vegetarian)</li>
+                    <li>Vegan cupcakes (Vegan)</li>
+                    <li>Lemon meringue tartlets (Vegetarian)</li>
                     <li>Vegan brownies</li>
                     <li>Macarons & cookies (Vegetarian)</li>
-                    <li>Cookie assortment(Vegan)</li>
-                    <li>Scones with jam and cream(Vegetarian)</li>
-                    <li>Plain Scones(Vegan)</li>
+                    <li>Cookie assortment (Vegan)</li>
+                    <li>Scones with jam and cream (Vegetarian)</li>
+                    <li>Plain Scones (Vegan)</li>
                     <li>Fresh fruit platter</li>
-                        <p><b> ~ SHARING PLATTERS ~ </b></p>
-                        <li>Charcuterie board (Halal/Vegetarian)</li>
-                        <li>Savoury muffins with sun-dried tomato & basil</li>
-
-                        <b><p> ~ OUR SAVOURY VEGAN OPTIONS ~ </p></b>
-                        <li>Mediterranean platter</li>
-                        <li>Spinach & mushroom puff pastries</li>
-                        <li>Mini savoury rolls with herb and vegetable filling</li>
-                        <li>Roasted pepper and hummus bruschetta</li>
-                        <li>Mini quiches (tofu-based filling with vegetables)</li>
-                        <li>Vegan sausage rolls</li>
-                        <p><b> ~ DESSERT PLATTERS ~ </p></b>
-                        <li>Mini Cheesecakes with berries-vegetarian</li>
-                        <li>Cake pops</li>
-                        <li>Vegan mini cheesecakes</li>
-                        <li>petals pistachio tiramisu</li>
-
+                    <p><b>~ SHARING PLATTERS ~</b></p>
+                    <li>Charcuterie board (Halal/Vegetarian)</li>
+                    <li>Savoury muffins with sun-dried tomato & basil</li>
+                    <p><b>~ DESSERT PLATTERS ~</b></p>
+                    <li>Mini Cheesecakes with berries-vegetarian</li>
+                    <li>Cake pops</li>
+                    <li>Vegan mini cheesecakes</li>
+                    <li>Petals pistachio tiramisu</li>
                 </ul>
-               </div>
+            </div>
         </div>
         <footer>
             <div class="footer">

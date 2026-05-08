@@ -45,6 +45,8 @@ footer {
 img { 
     display: block;
     justify-content: center;
+    max-width: 100%;
+    height: auto;
 }
 
 button, .link-btn {
@@ -99,6 +101,154 @@ button, .link-btn :hover {
     border: 1px solid rgb(255, 0, 149);
     border-radius: 8px;
     background-color: rgba(255, 179, 198, 0.3);
+}
+
+/* || Mobile Adaptation */
+
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #mainheader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    #mainheader img {
+        height: auto !important;
+        width: 150px !important;
+        max-width: 150px !important;
+    }
+
+    .top-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        background-color: #ffb3c6;
+    }
+
+    .top-nav a {
+        float: none;
+        font-size: 14px;
+        padding: 10px 12px;
+        display: inline-block;
+    }
+
+    .gd-index,
+    .gd-catering,
+    .gd-contact-form,
+    .gd-about,
+    .gd-shopping-cart {
+        display: block !important;
+        padding-left: 4%;
+        padding-right: 4%;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .catering-desc,
+    .catering-example,
+    .catering-form,
+    .catering-menu-sweet,
+    .catering-menu-savoury,
+    .catering-menu-ss {
+        grid-area: unset;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 1rem;
+    }
+
+    .catering-desc {
+        padding: 15px;
+        margin-top: 0;
+    }
+
+    #catering-images {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 0;
+        list-style: none;
+    }
+
+    #catering-images li {
+        display: inline-block;
+    }
+
+    #catering-placeholder {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-grid {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .product {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product img {
+        width: 100%;
+        height: 200px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 16px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .footer {
+        width: 100%;
+    }
+
+    .footer:empty {
+        display: none;
+    }
+
+    .icons-footer {
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .index-img1, .index-img2, .index-img3,
+    .index-promo1, .index-promo2, .index-promo3 {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    #availability-calendar {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .cal-grid {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .cal-day-name,
+    .cal-day {
+        font-size: 0.6rem;
+        padding: 3px 1px;
+    }
 }
 
 /* || Nav Bar */
