@@ -232,6 +232,8 @@ button, .link-btn :hover {
         object-fit: cover;
         display: block;
         margin-bottom: 0.5rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #availability-calendar {
