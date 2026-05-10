@@ -20,34 +20,40 @@
         <link rel="normalize" href="normalize.css">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel=" stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel=" stylesheet">
-        <script src="catering.js"></script><!--K-->
+        <script src="catering.js"></script>
     </head>
     <body>
         <div id="mainheader">
             <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" style="height: 200px; max-width: 100%;">
+
+            <!-- Nav Bar -->
             <div class="top-nav">
-                <a href="shopping-cart.html">🛒</a>
+                <a href="shopping-cart.html">🛒 <span id="cart-size">0</span></a>
                 <a class="active" href="index.html">Home</a>
-                <a href="product.html">Products</a> <!-- Testing -->
+                <a href="product.html">Products</a>
                 <a href="catering.html">Catering</a>
                 <a href="contact.html">Contact</a>
                 <a href="about.html">About</a>
             </div>
         </div>
         <script>
-        function showMember(link) {
-    document.getElementById('avatar-placeholder').src = link.href;
-    document.getElementById('avatar-placeholder').alt = link.innerText.trim();
-    document.getElementById('member-desc').textContent = link.title;
+            function showMember(link) {
+                document.getElementById('avatar-placeholder').src = link.href;
+                document.getElementById('avatar-placeholder').alt = link.innerText.trim();
+                document.getElementById('member-desc').textContent = link.title;
 
-    document.querySelectorAll('#gallery a').forEach(a => a.classList.remove('active'));
-    link.classList.add('active');
-}
+                document.querySelectorAll('#gallery a').forEach(a => a.classList.remove('active'));
+                link.classList.add('active');
+            }
         </script>
     </head>
     <body>
 
+    <!-- About Us Grid Container -->
     <div class="gd-about">
+        <main>
+
+        <!-- About Us Header -->
         <div class="gd-about-header">
             <h3>🌸History of Petal Bakes🌸</h3>
             <p>Petal Bakes began at Brighton university,  as a group of friends - brought together by a mutual love of baking and coding, turned a shared hobby into something we're truly proud of. What started as late-night baking testing and experimenting with ideas for our own online bakery soon flourished into a passion project with real potential.
@@ -60,7 +66,8 @@
             <p> Today Petal bakes stands as a testament to how collaboration, perseverance and belief in your vison can get you to places you've only ever dreamed of. </p>
         </div>
 
-            <div class="gd-about-content">
+        <!-- More Content About Petal Bakes -->
+        <div class="gd-about-content">
         <p><b>🌸OUR STORY🌸</b></p>
         <p>Petal bakes was created with a simple idea: to make freshly-baked high quality treats more accessible and convenient for everyone. Inspired by the comfort and joy that baked goods bring, our bakery was founded to combine traditional baking with the ease of online ordering. We believe that everyone should be able to enjoy delicious,
         handcrafted pastries without having to leave the comfort of your own home.</p>
@@ -88,6 +95,7 @@
 
                 </div> 
     </ul>
+<!-- About Us - The Team -->
 <div class="gd-about-team">
     <h3 class="meet-the-team">MEET THE TEAM</h3>
     <ul id="gallery">
@@ -121,9 +129,8 @@
     <p id="member-desc" class="member-desc"></p>
 </div>
 
-        <!--<p><b>WHY CHOOSE US?</b></p>
-         <p>At petal bakes we are more than just a bakery - we are a place where flavour, quality and convenience come together to bake something special  </p> -->
-         </div>
+     </div>
+     </main>
     </div>
 
         <footer>
@@ -152,8 +159,8 @@
                 </div>
             </div>
         </footer>
-</div>
-<small>&copy; 2026, Petal Bakes</small>
-   
+    </div>
+    <small>&copy; 2026, Petal Bakes</small>
+        <script src="shopping-cart.js"></script>
     </body>
 </html>

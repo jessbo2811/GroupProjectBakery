@@ -18,7 +18,7 @@
         <link rel="normalize" href="normalize.css">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel=" stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel=" stylesheet">        
-        <script src="catering.js"></script><!--K-->
+        <script src="catering.js"></script>
         <script>
             function changeImg(src) {
         document.getElementById('catering-placeholder').src = src;
@@ -28,8 +28,10 @@
     <body>
         <div id="mainheader">
         <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" style="height: 200px; max-width: 100%; display: block;">
+
+            <!-- Nav Bar -->
             <div class="top-nav">
-                <a href="shopping-cart.html">🛒</a>
+                <a href="shopping-cart.html">🛒 <span id="cart-size">0</span></a>
                 <a class="active" href="index.html">Home</a>
                 <a href="product.html">Products</a> <!-- Testing -->
                 <a href="catering.html">Catering</a>
@@ -37,12 +39,18 @@
                 <a href="about.html">About</a>
             </div>
         </div>
+
+        <!-- Catering Grid Container-->
         <div class="gd-catering">
+            <main>
+            
+            <!-- Catering Description -->
             <div class="catering-desc">
                 <h3>🌸Catering🌸</h3>
                 <p>Here at petal bakes we offer catering for a wide selection of baked goods. From sweet to savoury- we craft each item with the same immaculate attention and care that defines our bakery. Whether your hosting an intimate gathering or a large celebration- we offer services for every occasion. Whatever the event - Petal bakes catering services will guarantee to make a lasting impression as we bring comfort, flavour and beautifully made treats to your event.</p>
             </div>
             
+            <!-- Catering Image Examples -->
             <div class="catering-example">
                 <p>Take a look at some of the events we've catered for below:</p>
                 <ul id="catering-images">
@@ -57,6 +65,7 @@
                 <p>If you're looking for high-quality, delicious baked goods delivered with friendly, efficient service, simply complete the enquiry form on the right and we'll be in touch as soon as possible</p>
             </div>
 
+            <!-- Catering Form -->
             <div class="catering-form">
                 <h2 style="text-align: center;">Book Our Catering Services Now!</h2>
                 <form method="POST" action="book-catering.php" style="text-align: left;">
@@ -80,6 +89,7 @@
                 </form>
             </div>
 
+            <!-- Catering Sweet Menu -->
             <div class="catering-menu-sweet">
                 <h2>Sweet Menu</h2>
                 <p>Our sweet menu is guaranteed to satisfy every sweet-toothed guest. Take a look at our curation of sweet items:</p>
@@ -116,6 +126,7 @@
                 </ul>
             </div>
 
+            <!-- Catering Savoury Menu -->
             <div class="catering-menu-savoury">
                 <h2>Savoury Menu</h2>
                 <p>This is our selection of savoury delights</p>
@@ -149,6 +160,7 @@
                 </ul>
             </div>
 
+            <!-- Catering Menu Sweet & Savoury -->
             <div class="catering-menu-ss">
                 <h2>Sweet & Savoury Menu</h2>
                 <p>Our sweet and savoury menu combined</p>
@@ -177,7 +189,10 @@
                     <li>Petals pistachio tiramisu</li>
                 </ul>
             </div>
+            </main>
         </div>
+
+        <!-- Footer -->
         <footer>
             <div class="footer">
                 <h3><a class="footer-links" href="catering.html">Catering</a></h3>
@@ -205,7 +220,6 @@
                 </div>
             </div>
         </footer>
-        
-
+    <script src="shopping-cart.js"></script>
     </body>
 </html>
