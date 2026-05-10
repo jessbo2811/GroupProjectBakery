@@ -151,7 +151,7 @@ window.addEventListener('load', function() {
             hintMenuChoice.style.display = 'none';
         }
 
-        if (cateringDate == '' || selectedCateringDate <= today) {
+        if (cateringDate === '') {
             hintDate.style.display = 'inline';
             fieldsOK = false;
         } else {
