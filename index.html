@@ -1,82 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+          content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data:;
+        form-action 'self';
+        frame-ancestors 'self';
+      ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petal Bakes</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="Content-Security-Policy"
-              content="
-            default-src 'self';
-            script-src 'self' 'unsafe-inline';
-            style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-            font-src 'self' https://fonts.gstatic.com;
-            img-src 'self' data:;
-            form-action 'self';
-            frame-ancestors 'self';
-          ">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Petal Bakes</title>
-        <link rel="stylesheet" href="stylesheet.css">
-        <link rel="stylesheet" href="normalize.css">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    </head>
+    <div id="wrapper">
 
-    <body>
-        
-        <div id="wrapper">
-            <!-- Nav Bar -->
-            <div id="mainheader">
-               <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" style="height: 200px; max-width: 100%;">
-                <div class="top-nav">
-                    <a href="shopping-cart.html">🛒 <span id="cart-size">0</span></a>
-                    <a class="active" href="index.html">Home</a>
-                    <a href="product.html">Products</a>
-                    <a href="catering.html">Catering</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="about.html">About</a>
-                </div>
-            </div>
-
-        <!-- Main Page Grid Container -->
-        <div class="gd-index">
-            <main>
-
-            <!-- About Us Banner -->
-            <div class="index-aboutus">
-                <h3>Welcome to Petal Bakes</h3>
-                <p><b>Your online bakery for freshly crafted treats.</b> </p>
-                   <p> Browse through our selection of sweet and savoury bakes, add your favourites to your basket, and simply place your order with just a click. All our items are prepared with care
-                and delivered directly to your door.</p>
-
-                <p>If you're planning an event, we also offer bespoke catering. Visit our catering page to explore our menus, choose your preferred date on the calendar and complete the enquiry form. We'll be in touch with all the details.</p>
-                <!-- Zainab Edit -->
-            </div>
-
-            <!-- First Image Banner -->
-            <a href="product.html"><img class="index-img1" src="images/cookies.jpg" alt="Cookies"></a>
-            <a href="product.html"><img class="index-img2" src="images/bananabread.jpeg" alt="Banana Bread"></a>
-            <a href="product.html"><img class="index-img3" src="images/raspcookies.jpeg" alt="Raspberry Cookies"></a>
-
-            <!-- Custom Orders Banner -->
-            <div class="index-cust-orders">
-                <h3>🌸Custom Orders🌸</h3>
-                <p>Have a special request? We offer various options and willing to work with our customers to ensure that they get the products they desire. </p> 
-                <a class="link-btn" href="contact.html">Enquire Here</a>
-            </div>
-
-            <!-- Second Image Banner-->
-            <a href="product.html"> <img class="index-promo1" src="images/cinnamonbuns.jpeg" alt="Cinnamon Buns"></a>
-            <a href="product.html"> <img class="index-promo2" src="images/chocolatecake.jpeg" alt="Chocolate Cake"></a>
-            <a href="product.html"> <img class="index-promo3" src="images/selection-cookies.jpeg" alt="Selection of Cookies"></a>
-            
-            <!-- Event Catering Banner -->
-            <div class="catering-ad">
-                <h3>🌸Event Catering Available Here🌸</h3>
-                <a class="link-btn" href="catering.html">Book Here</a>
+        <!-- Nav Bar -->
+        <div id="mainheader">
+            <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" style="height: 200px; max-width: 100%;">
+            <div class="top-nav">
+                <a href="shopping-cart.html">🛒 <span id="cart-size">0</span></a>
+                <a class="active" href="index.html">Home</a>
+                <a href="product.html">Products</a>
+                <a href="catering.html">Catering</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
             </div>
         </div>
+
+        <main>
+
+            <!-- Main Page Grid Container -->
+            <div class="gd-index">
+
+                <!-- About Us Banner -->
+                <div class="index-aboutus">
+                    <h3>Welcome to Petal Bakes</h3>
+                    <p><b>Your online bakery for freshly crafted treats.</b></p>
+                    <p>Browse through our selection of sweet and savoury bakes, add your favourites to your basket, and place your order with just a click. All our items are prepared with care and delivered directly to your door.</p>
+                    <p>If you're planning an event, we also offer bespoke catering. Visit our catering page to explore our menus, choose your preferred date on the calendar, and complete the enquiry form. We'll be in touch with all the details.</p>
+                </div>
+
+                <!-- First Image Banner -->
+                <a href="product.html"><img class="index-img1" src="images/cookies.jpg" alt="Cookies"></a>
+                <a href="product.html"><img class="index-img2" src="images/bananabread.jpeg" alt="Banana Bread"></a>
+                <a href="product.html"><img class="index-img3" src="images/raspcookies.jpeg" alt="Raspberry Cookies"></a>
+
+                <!-- Custom Orders Banner -->
+                <div class="index-cust-orders">
+                    <h3>🌸Custom Orders🌸</h3>
+                    <p>Have a special request? We offer a range of options and are happy to work with you to make sure you get exactly what you're looking for.</p>
+                    <a class="link-btn" href="contact.html">Enquire Here</a>
+                </div>
+
+                <!-- Second Image Banner -->
+                <a href="product.html"><img class="index-promo1" src="images/cinnamonbuns.jpeg" alt="Cinnamon Buns"></a>
+                <a href="product.html"><img class="index-promo2" src="images/chocolatecake.jpeg" alt="Chocolate Cake"></a>
+                <a href="product.html"><img class="index-promo3" src="images/selection-cookies.jpeg" alt="Selection of Cookies"></a>
+
+                <!-- Event Catering Banner -->
+                <div class="catering-ad">
+                    <h3>🌸Event Catering Available Here🌸</h3>
+                    <a class="link-btn" href="catering.html">Book Here</a>
+                </div>
+
+            </div>
+
         </main>
-        
+
         <!-- Footer -->
         <footer>
             <div class="footer">
@@ -85,12 +83,8 @@
                 <h3><a class="footer-links" href="contact.html">Contact Form</a></h3>
                 <small>&copy; 2026, Petal Bakes</small>
             </div>
-            <div class="footer">
-
-            </div>
-            <div class="footer">
-
-            </div>
+            <div class="footer"></div>
+            <div class="footer"></div>
             <div class="footer">
                 <h3>108 Prestonville Road</h3>
                 <h3>Brighton BN1 3TE</h3>
@@ -105,6 +99,10 @@
                 </div>
             </div>
         </footer>
+
         <script src="shopping-cart.js"></script>
-    </body>
+
+    </div>
+
+</body>
 </html>

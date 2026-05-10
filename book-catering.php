@@ -18,7 +18,8 @@ if ($mysqli->connect_errno) {
     exit();
 }
 
-$email = htmlspecialchars(trim($_POST['email']), ENT_QUOTES); // To handle any names with an apostrophe like o'brien or something
+// Sanitise inputs - ENT_QUOTES handles names with apostrophes e.g. O'Brien
+$email = htmlspecialchars(trim($_POST['email']), ENT_QUOTES);
 $menuChoice = htmlspecialchars($_POST['menu-choice'], ENT_QUOTES);
 $date = htmlspecialchars(trim($_POST['catering-date']), ENT_QUOTES);
 

@@ -2,45 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+          content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data:;
+        form-action 'self';
+        frame-ancestors 'self';
+      ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petal Bakes Checkout</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <link rel="normalize" href="normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel=" stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel=" stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body class="payment-page">
-<!--Minimal Header-->
-<div class="mainheader">
-    <img src="images/petalbakes-logo.png" class="logo">
-<a href="product.html" class="back-link"> <- Back to shop </a>
+
+    <!-- Minimal Header -->
+    <div class="mainheader">
+        <img src="images/petalbakes-logo.png" class="logo">
+        <a href="product.html" class="back-link">&larr; Back to shop</a>
     </div>
 
-<!--Checkout Layout-->
-<div class = "checkout-container">
-    <!--LEFT-->
-    <div class="checkout-left">
+    <!-- Checkout Layout -->
+    <div class="checkout-container">
 
+        <!-- Left -->
+        <div class="checkout-left">
+            <h2>Payment Details</h2>
+            <div id="order-summary"></div>
 
-<h2> Payment details </h2>
-<div id=" order-summary"></div>
+            <form id="payment-form">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="text" name="card" placeholder="Card Number" required>
+                <div class="row">
+                    <input type="text" name="expiry" placeholder="MM / YY" required>
+                    <input type="text" name="cvc" placeholder="CVC" required>
+                </div>
+                <button type="submit">Pay Now</button>
+            </form>
 
-<form id="payment-form">
-   <input type = "text" name="name" placeholder = "Full Name" required>
-    <input type = "text" name="card" placeholder = "Card Number" required>
-    <div class="row">
-        <input type = "text" name="expiry" placeholder = "MM / YY" required>
-        <input type = "text" name="cvc" placeholder = "CVC" required>
+            <p id="message"></p>
+        </div>
 
     </div>
 
-    <button type ="submit">Pay Now</button>
-</form>
-        <p id="message"></p>
-    </div>
+    <script src="payment.js"></script>
 
-<p id=" message"></p>
-<script src = "payment.js"></script>
 </body>
-
 </html>

@@ -1,4 +1,4 @@
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     const form = document.querySelector('form');
 
     const email = form.querySelector('#email');
@@ -10,10 +10,9 @@ window.addEventListener('load', function() {
     const enquiry = form.querySelector('#enquiry');
     const hintEnquiry = form.querySelector('#hint_enquiry');
 
-    const sendButton = form.querySelector("#send-enq");
+    const sendButton = form.querySelector('#send-enq');
 
     sendButton.addEventListener('click', function (e) {
-
         e.preventDefault();
 
         const enquirySubject = form.querySelector("input[name='enquirysubject']:checked");
@@ -24,21 +23,21 @@ window.addEventListener('load', function() {
 
         let fieldsOK = true;
 
-        if(enquiryEmail.length < 5 || enquiryEmail.indexOf('@') < 0) {
+        if (enquiryEmail.length < 5 || enquiryEmail.indexOf('@') < 0) {
             hintEmail.style.display = 'inline';
             fieldsOK = false;
         } else {
             hintEmail.style.display = 'none';
         }
 
-        if(selectedEnquirySubject == null) {
+        if (selectedEnquirySubject == null) {
             hintEnquirySubject.style.display = 'inline';
             fieldsOK = false;
         } else {
             hintEnquirySubject.style.display = 'none';
         }
 
-        if(enquiryText.length == 0) {
+        if (enquiryText.length == 0) {
             hintEnquiry.style.display = 'inline';
             fieldsOK = false;
         } else {
@@ -68,7 +67,5 @@ window.addEventListener('load', function() {
             })
             .catch(err => console.error('Fetch error:', err));
         }
-
-
-    })
-})
+    });
+});

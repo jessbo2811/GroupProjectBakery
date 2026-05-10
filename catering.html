@@ -1,68 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="Content-Security-Policy"
-              content="
-            default-src 'self';
-            script-src 'self' 'unsafe-inline';
-            style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-            font-src 'self' https://fonts.gstatic.com;
-            img-src 'self' data:;
-            form-action 'self';
-            frame-ancestors 'self';
-          ">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Petal Bakes</title>
-        <link rel="stylesheet" href="stylesheet.css">
-        <link rel="normalize" href="normalize.css">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel=" stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel=" stylesheet">        
-        <script src="catering.js"></script>
-        <script>
-            function changeImg(src) {
-        document.getElementById('catering-placeholder').src = src;
-}
-        </script>
-    </head>
-    <body>
-        <div id="mainheader">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+          content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data:;
+        form-action 'self';
+        frame-ancestors 'self';
+      ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petal Bakes</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="catering.js"></script>
+    <script>
+        function changeImg(src) {
+            document.getElementById('catering-placeholder').src = src;
+        }
+    </script>
+</head>
+<body>
+
+    <div id="mainheader">
         <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" style="height: 200px; max-width: 100%; display: block;">
 
-            <!-- Nav Bar -->
-            <div class="top-nav">
-                <a href="shopping-cart.html">🛒 <span id="cart-size">0</span></a>
-                <a class="active" href="index.html">Home</a>
-                <a href="product.html">Products</a> <!-- Testing -->
-                <a href="catering.html">Catering</a>
-                <a href="contact.html">Contact</a>
-                <a href="about.html">About</a>
-            </div>
+        <!-- Nav Bar -->
+        <div class="top-nav">
+            <a href="shopping-cart.html">🛒 <span id="cart-size">0</span></a>
+            <a class="active" href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="catering.html">Catering</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
         </div>
+    </div>
 
-        <!-- Catering Grid Container-->
+    <main>
+
+        <!-- Catering Grid Container -->
         <div class="gd-catering">
-            <main>
-            
+
             <!-- Catering Description -->
             <div class="catering-desc">
                 <h3>🌸Catering🌸</h3>
-                <p>Here at petal bakes we offer catering for a wide selection of baked goods. From sweet to savoury- we craft each item with the same immaculate attention and care that defines our bakery. Whether your hosting an intimate gathering or a large celebration- we offer services for every occasion. Whatever the event - Petal bakes catering services will guarantee to make a lasting impression as we bring comfort, flavour and beautifully made treats to your event.</p>
+                <p>Here at Petal Bakes we offer catering for a wide selection of baked goods. From sweet to savoury, we craft each item with the same immaculate attention and care that defines our bakery. Whether you're hosting an intimate gathering or a large celebration, we offer services for every occasion. Whatever the event, Petal Bakes catering services will guarantee to make a lasting impression, bringing comfort, flavour and beautifully made treats to your event.</p>
             </div>
-            
+
             <!-- Catering Image Examples -->
             <div class="catering-example">
                 <p>Take a look at some of the events we've catered for below:</p>
                 <ul id="catering-images">
                     <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 1.jpeg'); return false;">Image 1</a></li>
-                    <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 2.jpeg'); return false;">Image 2</a></li>
+                    <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 2.jpeg'); return false;">Image 2</li>
                     <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 3.jpeg'); return false;">Image 3</a></li>
                     <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 4.jpeg'); return false;">Image 4</a></li>
                 </ul>
                 <img id="catering-placeholder" src="images/Catering Img 1.jpeg" alt="Catering Picture" />
                 <p>Catering Events</p>
-                <p>Explore the catering menus we offer below. Choose from our savoury menu, sweet menu or a balanced mix of both, at petal bakes we have something for everyone.</p>
-                <p>If you're looking for high-quality, delicious baked goods delivered with friendly, efficient service, simply complete the enquiry form on the right and we'll be in touch as soon as possible</p>
+                <p>Explore the catering menus we offer below. Choose from our savoury menu, sweet menu, or a balanced mix of both — at Petal Bakes we have something for everyone.</p>
+                <p>If you're looking for high-quality, delicious baked goods delivered with friendly, efficient service, simply complete the enquiry form on the right and we'll be in touch as soon as possible.</p>
             </div>
 
             <!-- Catering Form -->
@@ -92,35 +93,35 @@
             <!-- Catering Sweet Menu -->
             <div class="catering-menu-sweet">
                 <h2>Sweet Menu</h2>
-                <p>Our sweet menu is guaranteed to satisfy every sweet-toothed guest. Take a look at our curation of sweet items:</p>
+                <p>Our sweet menu is guaranteed to satisfy every sweet-toothed guest. Take a look at our selection of sweet items:</p>
                 <ul>
-                    <h3><b>Our Mega size treats</b></h3>
+                    <h3><b>Our Mega Size Treats</b></h3>
                     <p><b>~ SIGNATURE CAKES & TARTS ~</b></p>
                     <li>Vanilla sponge cake</li>
                     <li>Chocolate fudge cake</li>
                     <li>Lemon meringue tartlets</li>
                     <li>Seasonal fruit tartlets (Vegetarian)</li>
-                    <li>Vegan chocolate forest cake with berries of choosing</li>
+                    <li>Vegan chocolate forest cake with berries of your choosing</li>
                     <li>Vegan berry tart with dairy-free custard</li>
-                    <h3><b>Petite Petal treats</b></h3>
+                    <h3><b>Petite Petal Treats</b></h3>
                     <p><b>~ ASSORTED CUPCAKES ~</b></p>
-                    <li>Vanilla rose-Vegetarian</li>
-                    <li>Chocolate swirl-Vegetarian</li>
-                    <li>Red velvet-Vegetarian</li>
-                    <li>Sprinkle galore-Vegetarian</li>
-                    <li>Vegan cupcakes (Vanilla, chocolate, lemon)</li>
+                    <li>Vanilla rose - Vegetarian</li>
+                    <li>Chocolate swirl - Vegetarian</li>
+                    <li>Red velvet - Vegetarian</li>
+                    <li>Sprinkle galore - Vegetarian</li>
+                    <li>Vegan cupcakes (vanilla, chocolate, lemon)</li>
                     <p><b>~ BROWNIES & BLONDIES ~</b></p>
                     <li>Dark chocolate brownies</li>
                     <li>Milk chocolate brownies</li>
-                    <li>Fantastic Fudge Brownies</li>
-                    <li>Classic Blondie</li>
-                    <li>Biscoff Blondie brownie</li>
-                    <li>Classic Vegan Brownies or Blondies</li>
+                    <li>Fantastic fudge brownies</li>
+                    <li>Classic blondie</li>
+                    <li>Biscoff blondie brownie</li>
+                    <li>Classic vegan brownies or blondies</li>
                     <p><b>~ DESSERT PLATTERS ~</b></p>
-                    <li>Mini Cheesecakes with berries-vegetarian</li>
+                    <li>Mini cheesecakes with berries - Vegetarian</li>
                     <li>Cake pops</li>
                     <li>Vegan mini cheesecakes</li>
-                    <li>Petals pistachio tiramisu</li>
+                    <li>Petal's pistachio tiramisu</li>
                     <li>Vegan cake pops</li>
                     <li>Vegan cookie platter (chocolate chip, oat and raisin, double chocolate)</li>
                 </ul>
@@ -129,26 +130,26 @@
             <!-- Catering Savoury Menu -->
             <div class="catering-menu-savoury">
                 <h2>Savoury Menu</h2>
-                <p>This is our selection of savoury delights</p>
+                <p>This is our selection of savoury delights.</p>
                 <ul>
                     <p><b>~ OUR FLAVOUR-FILLED SIDES ~</b></p>
-                    <li>Nachos & dip- Vegetarian, Vegan, Halal</li>
-                    <li>Loaded chips (peri-peri/ chicken tikka/tomato & cheese)-Halal</li>
-                    <li>Mini tacos (low/medium/spicy)</li>
+                    <li>Nachos & dip - Vegetarian, Vegan, Halal</li>
+                    <li>Loaded chips (peri-peri / chicken tikka / tomato & cheese) - Halal</li>
+                    <li>Mini tacos (low / medium / spicy)</li>
                     <p><b>~ MINI PASTRIES AND BITES ~</b></p>
                     <li>Spinach & feta puff pastries</li>
                     <li>Cheese and herb scones</li>
-                    <li>Mini croissants with smoked salmon and cream cheese -Halal</li>
+                    <li>Mini croissants with smoked salmon and cream cheese - Halal</li>
                     <li>Caramelised onion & cheddar tartlets - Vegetarian</li>
-                    <p><b>~ WARM SAVOURY-SELECTIONS ~</b></p>
+                    <p><b>~ WARM SAVOURY SELECTIONS ~</b></p>
                     <li>Mini quiches (Lorraine, spinach & mushroom)</li>
-                    <li>Gourmet sausage rolls (Chicken or Beef)- Halal</li>
-                    <li>Burrito bowls (Vegetarian/ Halal)</li>
-                    <li>Wraps (Vegetarian/ Halal)</li>
-                    <li>Sandwiches (Vegetarian/ Halal)</li>
-                    <li>Sausage rolls (Vegetarian/ Halal)</li>
+                    <li>Gourmet sausage rolls (chicken or beef) - Halal</li>
+                    <li>Burrito bowls (Vegetarian / Halal)</li>
+                    <li>Wraps (Vegetarian / Halal)</li>
+                    <li>Sandwiches (Vegetarian / Halal)</li>
+                    <li>Sausage rolls (Vegetarian / Halal)</li>
                     <p><b>~ SHARING PLATTERS ~</b></p>
-                    <li>Charcuterie board (Halal/Vegetarian)</li>
+                    <li>Charcuterie board (Halal / Vegetarian)</li>
                     <li>Savoury muffins with sun-dried tomato & basil</li>
                     <p><b>~ OUR SAVOURY VEGAN OPTIONS ~</b></p>
                     <li>Mediterranean platter</li>
@@ -163,63 +164,63 @@
             <!-- Catering Menu Sweet & Savoury -->
             <div class="catering-menu-ss">
                 <h2>Sweet & Savoury Menu</h2>
-                <p>Our sweet and savoury menu combined</p>
-                <p>Balanced Selection- For those who like both</p>
+                <p>Our sweet and savoury menu combined.</p>
+                <p>Balanced selection — for those who like both.</p>
                 <ul>
-                    <li>Mini quiches (Halal/Vegetarian)</li>
+                    <li>Mini quiches (Halal / Vegetarian)</li>
                     <li>Sausage rolls (Halal)</li>
                     <li>Spinach & feta pastries (Vegetarian)</li>
                     <li>Savoury rolls (Vegan)</li>
-                    <li>Vanilla & Chocolate cupcakes (Vegetarian)</li>
+                    <li>Vanilla & chocolate cupcakes (Vegetarian)</li>
                     <li>Vegan cupcakes (Vegan)</li>
                     <li>Lemon meringue tartlets (Vegetarian)</li>
                     <li>Vegan brownies</li>
                     <li>Macarons & cookies (Vegetarian)</li>
                     <li>Cookie assortment (Vegan)</li>
                     <li>Scones with jam and cream (Vegetarian)</li>
-                    <li>Plain Scones (Vegan)</li>
+                    <li>Plain scones (Vegan)</li>
                     <li>Fresh fruit platter</li>
                     <p><b>~ SHARING PLATTERS ~</b></p>
-                    <li>Charcuterie board (Halal/Vegetarian)</li>
+                    <li>Charcuterie board (Halal / Vegetarian)</li>
                     <li>Savoury muffins with sun-dried tomato & basil</li>
                     <p><b>~ DESSERT PLATTERS ~</b></p>
-                    <li>Mini Cheesecakes with berries-vegetarian</li>
+                    <li>Mini cheesecakes with berries - Vegetarian</li>
                     <li>Cake pops</li>
                     <li>Vegan mini cheesecakes</li>
-                    <li>Petals pistachio tiramisu</li>
+                    <li>Petal's pistachio tiramisu</li>
                 </ul>
             </div>
-            </main>
+
         </div>
 
-        <!-- Footer -->
-        <footer>
-            <div class="footer">
-                <h3><a class="footer-links" href="catering.html">Catering</a></h3>
-                <h3><a class="footer-links" href="product.html">Product</a></h3>
-                <h3><a class="footer-links" href="contact.html">Contact Form</a></h3>
-                <small>&copy; 2026, Petal Bakes</small>
-            </div>
-            <div class="footer">
+    </main>
 
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <h3><a class="footer-links" href="catering.html">Catering</a></h3>
+            <h3><a class="footer-links" href="product.html">Product</a></h3>
+            <h3><a class="footer-links" href="contact.html">Contact Form</a></h3>
+            <small>&copy; 2026, Petal Bakes</small>
+        </div>
+        <div class="footer"></div>
+        <div class="footer"></div>
+        <div class="footer">
+            <h3>108 Prestonville Road</h3>
+            <h3>Brighton BN1 3TE</h3>
+            <h3>01273 000 000</h3>
+        </div>
+        <div class="footer">
+            <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" style="height: 100px;">
+            <div class="icons-footer">
+                <a href="#"><img src="images/instagram-icon.png" alt="Instagram Icon"></a>
+                <a href="#"><img src="images/facebook-icon.png" alt="Facebook Icon"></a>
+                <a href="#"><img src="images/tiktok-icon.png" alt="TikTok Icon"></a>
             </div>
-            <div class="footer">
+        </div>
+    </footer>
 
-            </div>
-            <div class="footer">
-                <h3>108 Prestonville Road</h3>
-                <h3>Brighton BN1 3TE</h3>
-                <h3>01273 000 000</h3>
-            </div>
-            <div class="footer">
-                <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" style="height: 100px;">
-                <div class="icons-footer">
-                    <a href="#"><img src="images/instagram-icon.png" alt="Instagram Icon"></a>
-                    <a href="#"><img src="images/facebook-icon.png" alt="Facebook Icon"></a>
-                    <a href="#"><img src="images/tiktok-icon.png" alt="TikTok Icon"></a>
-                </div>
-            </div>
-        </footer>
     <script src="shopping-cart.js"></script>
-    </body>
+
+</body>
 </html>

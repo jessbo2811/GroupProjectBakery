@@ -2,10 +2,9 @@
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 
-// gets the current month
+// Gets the current month
 $month = isset($_GET['month']) ? $_GET['month'] : date('Y-m');
 
-// Hardcoded data just for testing the calendar display
 list($year, $mon) = explode('-', $month);
 $daysInMonth = cal_days_in_month(CAL_GREGORIAN, (int)$mon, (int)$year);
 

@@ -1,4 +1,4 @@
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
 
     const shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 
@@ -14,7 +14,7 @@ window.addEventListener('load', function() {
             const productName = thisProduct.querySelector(".name").innerText;
             const productPrice = thisProduct.querySelector(".price").innerText;
 
-            addToShoppingCart({productName, productPrice});
+            addToShoppingCart({ productName, productPrice });
 
             addProductBtn.textContent = '✓ Added to Cart!';
             addProductBtn.style.backgroundColor = 'green';
@@ -22,16 +22,13 @@ window.addEventListener('load', function() {
                 addProductBtn.textContent = 'Add to cart';
                 addProductBtn.style.backgroundColor = '';
             }, 2000);
-        })
-
-    function addToShoppingCart(product) {
-
-        shoppingCart.push(product);
-
-        localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
-
-    }
+        });
 
     });
 
-})
+    function addToShoppingCart(product) {
+        shoppingCart.push(product);
+        localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+    }
+
+});

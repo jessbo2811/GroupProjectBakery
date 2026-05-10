@@ -1,150 +1,128 @@
-        <!DOCTYPE html>
-        <link rel="stylesheet" href="stylesheet.css">
-        <link rel="normalize" href="normalize.css">
-        <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="Content-Security-Policy"
-              content="
-            default-src 'self';
-            script-src 'self' 'unsafe-inline';
-            style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-            font-src 'self' https://fonts.gstatic.com;
-            img-src 'self' data:;
-            form-action 'self';
-            frame-ancestors 'self';
-          ">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Petal Bakes</title>
-        <link rel="stylesheet" href="stylesheet.css">
-        <link rel="normalize" href="normalize.css">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel=" stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel=" stylesheet">
-        <script src="catering.js"></script>
-    </head>
-    <body>
-        <div id="mainheader">
-            <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" style="height: 200px; max-width: 100%;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+          content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data:;
+        form-action 'self';
+        frame-ancestors 'self';
+      ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petal Bakes</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="catering.js"></script>
+</head>
+<body>
 
-            <!-- Nav Bar -->
-            <div class="top-nav">
-                <a href="shopping-cart.html">🛒 <span id="cart-size">0</span></a>
-                <a class="active" href="index.html">Home</a>
-                <a href="product.html">Products</a>
-                <a href="catering.html">Catering</a>
-                <a href="contact.html">Contact</a>
-                <a href="about.html">About</a>
-            </div>
+    <div id="mainheader">
+        <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" style="height: 200px; max-width: 100%;">
+
+        <!-- Nav Bar -->
+        <div class="top-nav">
+            <a href="shopping-cart.html">🛒 <span id="cart-size">0</span></a>
+            <a class="active" href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="catering.html">Catering</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
         </div>
-        <script>
-            function showMember(link) {
-                document.getElementById('avatar-placeholder').src = link.href;
-                document.getElementById('avatar-placeholder').alt = link.innerText.trim();
-                document.getElementById('member-desc').textContent = link.title;
-
-                document.querySelectorAll('#gallery a').forEach(a => a.classList.remove('active'));
-                link.classList.add('active');
-            }
-        </script>
-    </head>
-    <body>
-
-    <!-- About Us Grid Container -->
-    <div class="gd-about">
-        <main>
-
-        <!-- About Us Header -->
-        <div class="gd-about-header">
-            <h3>🌸History of Petal Bakes🌸</h3>
-            <p>Petal Bakes began at Brighton university,  as a group of friends - brought together by a mutual love of baking and coding, turned a shared hobby into something we're truly proud of. What started as late-night baking testing and experimenting with ideas for our own online bakery soon flourished into a passion project with real potential.
-
-                </p>As our skills grew so did our ambition - We poured all our energy, time and resources into building Petal Bakes because we believed in our vision.
-               <p>From the very beginning, we wanted to create a bakery where flavour, high-quality ingredients and intricacy were at the heart of everything we do. To make our treats more accessible, we
-                   decided to offer delivery straight to our customers' doors. Every bake is crafted with care, precision and immaculate attention to detail, always keeping your interests at the
-                   centre of our work.
-            </p>
-            <p> Today Petal bakes stands as a testament to how collaboration, perseverance and belief in your vison can get you to places you've only ever dreamed of. </p>
-        </div>
-
-        <!-- More Content About Petal Bakes -->
-        <div class="gd-about-content">
-        <p><b>🌸OUR STORY🌸</b></p>
-        <p>Petal bakes was created with a simple idea: to make freshly-baked high quality treats more accessible and convenient for everyone. Inspired by the comfort and joy that baked goods bring, our bakery was founded to combine traditional baking with the ease of online ordering. We believe that everyone should be able to enjoy delicious,
-        handcrafted pastries without having to leave the comfort of your own home.</p>
-
-        <p><b> 🌸OUR MISSION🌸 </b> </p>
-        <p>Our mission is to deliver hand-crafted baked goods directly to your doorsteps with just a few clicks. You can enjoy
-        these mouth-watering delights all baked with care, intricacy and love.</p>
-
-        these mouth-watering delights all baked with care, intricacy and love.</p> 
-            </div>
-                <div class="gd-about-content2">
-        <p><b>🌸OUR VALUES🌸</b></p>
-    <ul>
-            <li><b>💎Quality</b> - We use carefully selected, high-quality ingredients to ensure our bakes are as good as they look.</li>
-            a delightful experience.</li>
-            <br>
-            <br>
-            <li><b>🌿Sustainability</b> - We are passionate about protecting our environment. Where possible, we make an effort to use
-            responsibly sourced ingredients and eco-friendly packaging to reduce waste and minimise environmental impact.</li>
-            <br>
-            <li><b>💕Customer Experience</b> - Every order is special towards our team, from our baking to our interactions with you. </li>
-            <br>
-            <li><b>👯‍♀️Community</b> - Our team is proud to be able to be apart of your customer experience with love and passion</li>
-            <br>
-
-                </div> 
-    </ul>
-<!-- About Us - The Team -->
-<div class="gd-about-team">
-    <h3 class="meet-the-team">MEET THE TEAM</h3>
-    <ul id="gallery">
-        <li>
-            <a class="link-btn" href="images/monica.png" 
-            title="Monica is our lead frontend developer and assistant project lead! She mainly worked on the HTML and CSS, and came up with a lot of the creative design of the website.
-            " onclick="showMember(this); return false;"> Monica </a>
-        </li>
-        <li>
-            <a class="link-btn" href="images/jess.png" 
-            title="Jess is the project lead and assistant frontend/backend developer! She helped organize the groups tasks, as well as the HTML, CSS and PHP.
-            " onclick="showMember(this); return false;"> Jess </a>
-        </li>
-        <li>
-            <a class="link-btn" href="images/quil.png" 
-            title="Quil is the report lead and compliance officer! They ensure the report is structured correctly, and that our website runs well, and doesn't break any rules.
-            " onclick="showMember(this); return false;"> Quil </a>
-        </li>
-        <li>
-            <a class="link-btn" href="images/zainab.png" 
-            title="Zainab is our security analyst and content writer! She writes all text content for the website, and makes sure our web security is up to standard!
-            " onclick="showMember(this); return false;"> Zainab </a>
-        </li>
-        <li>
-            <a class="link-btn" href="images/kary.png" title="Kary is our lead backend developer and databse administrator! She created our database, and worked on the JavaScript, SQL and PHP elements of the website.
-            " onclick="showMember(this); return false;"> Kary </a>
-        </li>
-    </ul>
-
-    <img id="avatar-placeholder" src="images/petalbakes-logo.png" alt="Logo" />
-    <p id="member-desc" class="member-desc"></p>
-</div>
-
-     </div>
-     </main>
     </div>
 
+    <main>
+
+        <!-- About Us Grid Container -->
+        <div class="gd-about">
+
+            <!-- About Us Header -->
+            <div class="gd-about-header">
+                <h3>🌸History of Petal Bakes🌸</h3>
+                <p>Petal Bakes began at Brighton University as a group of friends brought together by a mutual love of baking and coding, who turned a shared hobby into something we're truly proud of. What started as late-night baking sessions and experimenting with ideas for our own online bakery soon flourished into a passion project with real potential.</p>
+                <p>As our skills grew so did our ambition - We poured all our energy, time and resources into building Petal Bakes because we believed in our vision.</p>
+                <p>From the very beginning, we wanted to create a bakery where flavour, high-quality ingredients and intricacy were at the heart of everything we do. To make our treats more accessible, we
+                    decided to offer delivery straight to our customers' doors. Every bake is crafted with care, precision and immaculate attention to detail, always keeping your interests at the
+                    centre of our work.
+                </p>
+                <p>Today, Petal Bakes stands as a testament to how collaboration, perseverance and belief in your vision can get you to places you've only ever dreamed of.</p>
+            </div>
+
+            <!-- More Content About Petal Bakes -->
+            <div class="gd-about-content">
+                <p><b>🌸OUR STORY🌸</b></p>
+                <p>Petal Bakes was created with a simple idea: to make freshly-baked, high-quality treats more accessible and convenient for everyone. Inspired by the comfort and joy that baked goods bring, our bakery was founded to combine traditional baking with the ease of online ordering. We believe that everyone should be able to enjoy delicious,
+                handcrafted pastries without having to leave the comfort of your own home.</p>
+
+                <p><b>🌸OUR MISSION🌸</b></p>
+                <p>Our mission is to deliver hand-crafted baked goods directly to your doorsteps with just a few clicks. You can enjoy
+                these mouth-watering delights all baked with care, intricacy and love.</p>
+            </div>
+
+            <div class="gd-about-content2">
+                <p><b>🌸OUR VALUES🌸</b></p>
+                <ul>
+                    <li><b>💎Quality</b> - We use carefully selected, high-quality ingredients to ensure our bakes are as good as they look.</li>
+                    <br>
+                    <li><b>🌿Sustainability</b> - We are passionate about protecting our environment. Where possible, we make an effort to use
+                    responsibly sourced ingredients and eco-friendly packaging to reduce waste and minimise environmental impact.</li>
+                    <br>
+                    <li><b>💕Customer Experience</b> - Every order is important to our team, from our baking to our interactions with you.</li>
+                    <br>
+                    <li><b>👯‍♀️Community</b> - Our team is proud to be a part of your experience, delivering every order with love and passion.</li>
+                </ul>
+            </div>
+
+            <!-- About Us - The Team -->
+            <div class="gd-about-team">
+                <h3 class="meet-the-team">MEET THE TEAM</h3>
+                <ul id="gallery">
+                    <li>
+                        <a class="link-btn" href="images/monica.png"
+                        title="Monica is our lead frontend developer and assistant project lead! She mainly worked on the HTML and CSS, and came up with a lot of the creative design of the website."
+                        onclick="showMember(this); return false;">Monica</a>
+                    </li>
+                    <li>
+                        <a class="link-btn" href="images/jess.png"
+                        title="Jess is the project lead and assistant frontend/backend developer! She helped organise the group's tasks, as well as the HTML, CSS and PHP."
+                        onclick="showMember(this); return false;">Jess</a>
+                    </li>
+                    <li>
+                        <a class="link-btn" href="images/quil.png"
+                        title="Quil is the report lead and compliance officer! They ensure the report is structured correctly, and that our website runs well, and doesn't break any rules."
+                        onclick="showMember(this); return false;">Quil</a>
+                    </li>
+                    <li>
+                        <a class="link-btn" href="images/zainab.png"
+                        title="Zainab is our security analyst and content writer! She writes all text content for the website, and makes sure our web security is up to standard!"
+                        onclick="showMember(this); return false;">Zainab</a>
+                    </li>
+                    <li>
+                        <a class="link-btn" href="images/kary.png"
+                        title="Kary is our lead backend developer and database administrator! She created our database, and worked on the JavaScript, SQL and PHP elements of the website."
+                        onclick="showMember(this); return false;">Kary</a>
+                    </li>
+                </ul>
+
+                <img id="avatar-placeholder" src="images/petalbakes-logo.png" alt="Logo" />
+                <p id="member-desc" class="member-desc"></p>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
         <footer>
             <div class="footer">
                 <h3><a class="footer-links" href="catering.html">Catering</a></h3>
                 <h3><a class="footer-links" href="product.html">Product</a></h3>
                 <h3><a class="footer-links" href="contact.html">Contact Form</a></h3>
             </div>
-            <div class="footer">
-
-            </div>
-            <div class="footer">
-
-            </div>
+            <div class="footer"></div>
+            <div class="footer"></div>
             <div class="footer">
                 <h3>108 Prestonville Road</h3>
                 <h3>Brighton BN1 3TE</h3>
@@ -159,8 +137,23 @@
                 </div>
             </div>
         </footer>
-    </div>
-    <small>&copy; 2026, Petal Bakes</small>
-        <script src="shopping-cart.js"></script>
-    </body>
+
+        <small>&copy; 2026, Petal Bakes</small>
+
+    </main>
+
+    <script>
+        function showMember(link) {
+            document.getElementById('avatar-placeholder').src = link.href;
+            document.getElementById('avatar-placeholder').alt = link.innerText.trim();
+            document.getElementById('member-desc').textContent = link.title;
+
+            document.querySelectorAll('#gallery a').forEach(a => a.classList.remove('active'));
+            link.classList.add('active');
+        }
+    </script>
+
+    <script src="shopping-cart.js"></script>
+
+</body>
 </html>

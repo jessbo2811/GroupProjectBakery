@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Petal Bakes</title>
-        <link rel="stylesheet" href="stylesheet.css">
-        <link rel="normalize" href="normalize.css">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel=" stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel=" stylesheet">
-        <script src="index.js"></script>
-    </head>
-    <body>
-        <div id="mainheader">
-            <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" style="height: 200px; max-width: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+          content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data:;
+        form-action 'self';
+        frame-ancestors 'self';
+      ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petal Bakes</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+</head>
+<body>
 
-            <!-- Nav Bar -->
-            <div class="top-nav">
-                <a href="shopping-cart.html">🛒 <span id="cart-size">0</span></a>
-                <a class="active" href="index.html">Home</a>
-                <a href="product.html">Products</a>
-                <a href="catering.html">Catering</a>
-                <a href="contact.html">Contact</a>
-                <a href="about.html">About</a>
-            </div>
+    <div id="mainheader">
+        <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" style="height: 200px; max-width: 100%;">
+
+        <!-- Nav Bar -->
+        <div class="top-nav">
+            <a href="shopping-cart.html">🛒 <span id="cart-size">0</span></a>
+            <a class="active" href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="catering.html">Catering</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
         </div>
+    </div>
+
+    <main>
 
         <!-- Contact Page Grid Container -->
         <div class="gd-contact-form">
-            <main>
 
             <!-- Contact Form -->
             <form method="POST" action="contact.php" target="_self" class="contact-form">
                 <h2>Contact Us! 📞</h2>
                 <label for="email">Email:</label>
-                <span id="hint_email" class="hint"> - please enter your email</span><!--K-->
-                <input type="text" id="email" name="email"><br>
-                <br>
-                <label for="enquirysubject">What is your Enquiry About?:</label>
-                <span id="hint_enquirySubject" class="hint"> - please select an option</span><!--K-->
+                <span id="hint_email" class="hint"> - please enter your email</span>
+                <input type="text" id="email" name="email"><br><br>
+                <label for="enquirysubject">What is your enquiry about?:</label>
+                <span id="hint_enquirySubject" class="hint"> - please select an option</span>
                 <div class="radio-option">
                     <input type="radio" id="delivery-enq" name="enquirysubject" value="DELIVERY">
                     <label for="delivery-enq">Our Delivery Service</label>
@@ -51,24 +61,24 @@
                     <label for="other-enq">Other</label>
                 </div>
                 <br>
-                <label for="enquiry">What is your Enquiry?</label>
-                <span id="hint_enquiry" class="hint"> - please enter your Enquiry</span><!--K-->
+                <label for="enquiry">What is your enquiry?</label>
+                <span id="hint_enquiry" class="hint"> - please enter your enquiry</span>
                 <textarea id="enquiry" name="enquiry" rows="4"></textarea>
-                <br><!--K-->
-                <button id="send-enq" type="submit" name="send-enq">Send Enquiry</button><!--K-->
+                <br>
+                <button id="send-enq" type="submit" name="send-enq">Send Enquiry</button>
             </form>
 
-            <!-- About Us Section of Contact Page-->
+            <!-- About Us Section of Contact Page -->
             <div class="contact-about">
                 <h3>Find Us</h3>
                 <p>108 Prestonville Road<br>
                 Brighton BN1 3TE</p>
-                <iframe 
+                <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.5!2d-0.1478!3d50.8333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s108+Prestonville+Road+Brighton!5e0!3m2!1sen!2suk!4v1"
-                    width="100%" 
-                    height="200" 
-                    style="border:0; border-radius: 8px;" 
-                    allowfullscreen="" 
+                    width="100%"
+                    height="200"
+                    style="border:0; border-radius: 8px;"
+                    allowfullscreen=""
                     loading="lazy">
                 </iframe>
 
@@ -80,37 +90,37 @@
                 <h3>Call Us</h3>
                 <p>01273 000 000</p>
             </div>
-            </main>
+
         </div>
 
-            <!-- Footer -->
-            <footer>
-            <div class="footer">
-                <h3><a class="footer-links" href="catering.html">Catering</a></h3>
-                <h3><a class="footer-links" href="product.html">Product</a></h3>
-                <h3><a class="footer-links" href="contact.html">Contact Form</a></h3>
-                <small>&copy; 2026, Petal Bakes</small>
-            </div>
-            <div class="footer">
+    </main>
 
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <h3><a class="footer-links" href="catering.html">Catering</a></h3>
+            <h3><a class="footer-links" href="product.html">Product</a></h3>
+            <h3><a class="footer-links" href="contact.html">Contact Form</a></h3>
+            <small>&copy; 2026, Petal Bakes</small>
+        </div>
+        <div class="footer"></div>
+        <div class="footer"></div>
+        <div class="footer">
+            <h3>108 Prestonville Road</h3>
+            <h3>Brighton BN1 3TE</h3>
+            <h3>01273 000 000</h3>
+        </div>
+        <div class="footer">
+            <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" style="height: 100px;">
+            <div class="icons-footer">
+                <a href="#"><img src="images/instagram-icon.png" alt="Instagram Icon"></a>
+                <a href="#"><img src="images/facebook-icon.png" alt="Facebook Icon"></a>
+                <a href="#"><img src="images/tiktok-icon.png" alt="TikTok Icon"></a>
             </div>
-            <div class="footer">
+        </div>
+    </footer>
 
-            </div>
-            <div class="footer">
-                <h3>108 Prestonville Road</h3>
-                <h3>Brighton BN1 3TE</h3>
-                <h3>01273 000 000</h3>
-            </div>
-            <div class="footer">
-                <img src="images/petalbakes-logo.png" alt="Petal Bakes Logo" style="height: 100px;">
-                <div class="icons-footer">
-                    <a href="#"><img src="images/instagram-icon.png" alt="Instagram Icon"></a>
-                    <a href="#"><img src="images/facebook-icon.png" alt="Facebook Icon"></a>
-                    <a href="#"><img src="images/tiktok-icon.png" alt="TikTok Icon"></a>
-                </div>
-            </div>
-        </footer>
     <script src="shopping-cart.js"></script>
-    </body>
+
+</body>
 </html>
