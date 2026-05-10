@@ -19,7 +19,7 @@ if ($mysqli->connect_errno) {
 }
 
 $email = htmlspecialchars(trim($_POST['email']), ENT_QUOTES); // To handle any names with an apostrophe like o'brien or something
-$menuChoice = htmlspecialchars(trim($_POST['menu-choice']), ENT_QUOTES);
+$menuChoice = htmlspecialchars($_POST['menu-choice'], ENT_QUOTES);
 $date = htmlspecialchars(trim($_POST['catering-date']), ENT_QUOTES);
 
 $check = $mysqli->prepare("SELECT cateringID FROM tCatering WHERE cateringDate = ?");
