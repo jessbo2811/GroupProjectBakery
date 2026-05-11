@@ -195,6 +195,7 @@ button, .link-btn :hover {
     .product {
         flex-direction: column;
         text-align: center;
+        gap: 5rem;
     }
 
     .product img {
