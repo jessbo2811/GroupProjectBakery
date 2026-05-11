@@ -1,7 +1,7 @@
 /* || General Styles (styles that apply to multiple pages) */
 
 body {
-    font-family:'Inter', serif;
+    font-family: 'Inter', serif;
     font-size: 20px;
     background-color: #ffe5ec;
     background-image: url("https://www.transparenttextures.com/patterns/flowers.png"), linear-gradient(to bottom, #fff7fa, #ffeef3);
@@ -9,8 +9,8 @@ body {
 }
 
 h2, h3 {
-  font-family: 'Playfair Display', serif;
-  color: #b76e79;
+    font-family: 'Playfair Display', serif;
+    color: #b76e79;
 }
 
 footer {
@@ -24,15 +24,15 @@ footer {
     flex-wrap: wrap;
 }
 
-.footer-links { 
+.footer-links {
     text-decoration: none;
     display: block;
-    color: #b76e79; 
+    color: #b76e79;
 }
 
 .footer-links:hover {
-    color: #ff69b4;           
-    transition: color 0.3s ease; 
+    color: #ff69b4;
+    transition: color 0.3s ease;
 }
 
 .icons-footer {
@@ -42,7 +42,7 @@ footer {
     padding-left: 100px;
 }
 
-img { 
+img {
     display: block;
     justify-content: center;
     max-width: 100%;
@@ -50,24 +50,24 @@ img {
 }
 
 button, .link-btn {
-  display: inline-block;
-  background-color: #ff69b4;
-  color: white;
-  padding: 6px 14px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-left: 10px;
-  vertical-align: middle;
-  text-decoration: none;
-  white-space: nowrap;
-  width: fit-content;
+    display: inline-block;
+    background-color: #ff69b4;
+    color: white;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    vertical-align: middle;
+    text-decoration: none;
+    white-space: nowrap;
+    width: fit-content;
 }
 
-button, .link-btn :hover {
-  background-color: #ff1493;
-  transition: color 0.3s ease; 
+button:hover, .link-btn:hover {
+    background-color: #ff1493;
+    transition: color 0.3s ease;
 }
 
 .link-btn a {
@@ -87,9 +87,10 @@ button, .link-btn :hover {
     border: 1px solid rgb(255, 0, 149);
     border-radius: 8px;
     background-color: rgba(255, 179, 198, 0.3);
+    margin-bottom: 20px;
 }
 
-.selection-ad {    
+.selection-ad {
     grid-area: selection-ad;
     text-align: center;
     padding: 30px;
@@ -101,6 +102,16 @@ button, .link-btn :hover {
     border: 1px solid rgb(255, 0, 149);
     border-radius: 8px;
     background-color: rgba(255, 179, 198, 0.3);
+    margin-bottom: 20px;
+}
+
+.hint {
+    display: none;
+}
+
+.boxheading {
+    border: 1px solid rgb(255, 0, 149);
+    padding: 30%;
 }
 
 /* || Mobile Adaptation */
@@ -195,7 +206,7 @@ button, .link-btn :hover {
     .product {
         flex-direction: column;
         text-align: center;
-        gap: 5rem;
+        gap: 20px;
     }
 
     .product img {
@@ -279,10 +290,10 @@ button, .link-btn :hover {
 .top-nav a:hover {
     background-color: #ffc2d1;
     color: white;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
-/* || Shopping Cart */
+/* || Shopping Cart Page */
 
 .gd-shopping-cart {
     display: grid;
@@ -316,7 +327,7 @@ button, .link-btn :hover {
     margin-bottom: 10px;
 }
 
-/* || Home Page Grid Container */
+/* || Home Page */
 
 .gd-index {
     display: grid;
@@ -347,8 +358,8 @@ button, .link-btn :hover {
 
 .index-img1 img, .index-img2 img, .index-img3 img {
     width: 100%;
-    height: 200px; 
-    object-fit: cover; 
+    height: 200px;
+    object-fit: cover;
     display: block;
 }
 
@@ -361,9 +372,9 @@ button, .link-btn :hover {
     background-color: rgba(255, 179, 198, 0.3);
 }
 
-.index-promo1 {grid-area: index-promo1;}
-.index-promo2 {grid-area: index-promo2;}
-.index-promo3 {grid-area: index-promo3;}
+.index-promo1 { grid-area: index-promo1; }
+.index-promo2 { grid-area: index-promo2; }
+.index-promo3 { grid-area: index-promo3; }
 
 .index-promo1, .index-promo2, .index-promo3 {
     width: 100%;
@@ -373,10 +384,11 @@ button, .link-btn :hover {
 
 .index-promo1 img, .index-promo2 img, .index-promo3 img {
     width: 100%;
-    height: 200px; 
-    object-fit: cover; 
+    height: 200px;
+    object-fit: cover;
     display: block;
 }
+
 .index-aboutus {
     grid-area: index-aboutus;
     padding: 30px;
@@ -386,7 +398,7 @@ button, .link-btn :hover {
     border: 1px solid rgb(255, 0, 149);
 }
 
-/* || Contact Form */
+/* || Contact Page */
 
 .gd-contact-form {
     display: grid;
@@ -418,7 +430,7 @@ button, .link-btn :hover {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px black;   
+    box-shadow: 0 0 10px black;
 }
 
 .contact-form input[type="date"],
@@ -460,9 +472,9 @@ input {
 
 .contact-form label {
     font-weight: bold;
-    display: flex;        
-    align-items: center; 
-    margin-bottom: 10px;      
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 #send-enq {
@@ -479,10 +491,6 @@ input {
     opacity: 0.85;
 }
 
-.hint {
-    display: none;
-}
-
 .radio-option {
     display: flex;
     align-items: center;
@@ -494,21 +502,7 @@ input {
     margin: 0;
 }
 
-.meet-the-team {
-  display: flex;
-  justify-content: center;
-}
-
-.productsheader {
-  padding-left: 20%;
-}
-
-.boxheading {
-    border: 1px solid rgb(255, 0, 149);
-    padding: 30%;
-}
-
-/* || Grid-system for About Page */
+/* || About Page */
 
 .gd-about {
     display: grid;
@@ -533,29 +527,72 @@ input {
     background-color: rgba(255, 179, 198, 0.3);
 }
 
-.gd-about-content { 
+.gd-about-content {
     grid-area: gd-about-content;
     padding: 30px;
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
 }
 
-.gd-about-content2 { 
+.gd-about-content2 {
     grid-area: gd-about-content2;
     padding: 30px;
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
 }
 
-.gd-about-team { 
+.gd-about-team {
     grid-area: gd-about-team;
     padding: 30px;
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
 }
 
-/* || Catering Page */
+.meet-the-team {
+    display: flex;
+    justify-content: center;
+}
 
+/* || About Page - Image Gallery */
+
+#placeholder {
+    width: 80%;
+    max-width: 640px;
+}
+
+#avatar-placeholder {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+#member-desc {
+    text-align: center;
+}
+
+#gallery {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+}
+
+#gallery li {
+    display: inline;
+    margin: 1em;
+}
+
+#gallery a {
+    text-decoration: none;
+    display: inline-block;
+    width: 6em;
+    background-color: #ff69b4;
+    border-radius: 0.4em;
+}
+
+/* || Catering Page */
 
 .gd-catering {
     display: grid;
@@ -579,22 +616,21 @@ input {
     border: 1px solid rgb(255, 0, 149);
     border-radius: 8px;
     background-color: rgba(255, 179, 198, 0.3);
-  }
+}
 
-.catering-menu-sweet { 
+.catering-menu-sweet {
     grid-area: catering-menu-sweet;
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
     padding: 20px;
 }
 
-.catering-menu-savoury { 
+.catering-menu-savoury {
     grid-area: catering-menu-savoury;
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
     padding: 20px;
 }
-
 
 .catering-menu-ss {
     grid-area: catering-menu-ss;
@@ -604,7 +640,7 @@ input {
 }
 
 .catering-form {
-    grid-area: catering-form; 
+    grid-area: catering-form;
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
     padding: 20px;
@@ -618,7 +654,7 @@ input {
     text-align: center;
 }
 
-/* || Catering Image Carousel */
+/* || Catering Page - Image Carousel */
 
 #catering-placeholder {
     width: 50%;
@@ -628,13 +664,14 @@ input {
 
 #catering-images {
     list-style: none;
-  margin: 3m;
-  text-align: center;
-  padding: 0;
+    margin: 0;
+    text-align: center;
+    padding: 0;
 }
+
 #catering-images li {
-display: inline;
-margin: 1em;
+    display: inline;
+    margin: 1em;
 }
 
 #catering-images a {
@@ -648,50 +685,63 @@ margin: 1em;
     font-size: 16px;
 }
 
+/* || Catering Page - Availability Calendar */
 
-/* || Image Gallery */
-
-#placeholder {
-  width: 80%;
-  max-width: 640px;
+.cal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
 }
 
-#avatar-placeholder {
-    width: 400px;
-    height: 400px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-bottom: 8px;
 }
 
-#member-desc {
+.cal-day-name {
     text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
 }
 
-#gallery {
-  list-style: none;
-  margin: 3m;
-  text-align: center;
-  padding: 0;
+.cal-day {
+    text-align: center;
+    padding: 6px 2px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
 }
 
-#gallery li {
-  display: inline;
-  margin: 1em;
+.cal-day.available   { background: #d4edda; cursor: pointer; }
+.cal-day.booked      { background: #f8d7da; }
+.cal-day.unavailable { background: #e9ecef; color: #aaa; }
+.cal-day.past        { opacity: 0.4; }
+.cal-day.selected    { outline: 2px solid #333; }
+.day-label           { font-size: 0.65rem; }
+.cal-legend          { display: flex; gap: 12px; font-size: 0.8rem; }
+.legend-available    { color: green; }
+.legend-booked       { color: red; }
+
+#catering-date {
+    display: none;
 }
 
-#gallery a {
-  text-decoration: none;
-  display: inline-block;
-  width: 6em;
-  background-color: #ff69b4;
-  border-radius: 0.4em;
+.cal-day span {
+    pointer-events: none;
 }
 
-/* || Product Page */
+/* || Products Page */
 
 body.product-body {
     color: #2d1e1e;
+}
+
+.productsheader {
+    padding-left: 20%;
 }
 
 .product-grid {
@@ -701,7 +751,9 @@ body.product-body {
     gap: 20px;
     padding-left: 20%;
     padding-right: 20%;
+    padding-bottom: 10%;
 }
+
 
 .product {
     display: flex;
@@ -712,6 +764,7 @@ body.product-body {
     padding: 15px;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
 }
 
 .product img {
@@ -744,55 +797,11 @@ body.product-body {
     align-self: flex-start;
 }
 
-/* || Catering Calendar */
-
-.cal-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 8px;
-}
-.cal-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 4px;
-    margin-bottom: 8px;
-}
-.cal-day-name {
-    text-align: center;
-    font-weight: bold;
-    font-size: 0.8rem;
-}
-.cal-day {
-    text-align: center;
-    padding: 6px 2px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    display: flex;
-    flex-direction: column;
-}
-.cal-day.available  { background: #d4edda; cursor: pointer; }
-.cal-day.booked     { background: #f8d7da; }
-.cal-day.unavailable{ background: #e9ecef; color: #aaa; }
-.cal-day.past       { opacity: 0.4; }
-.cal-day.selected   { outline: 2px solid #333; }
-.day-label          { font-size: 0.65rem; }
-.cal-legend         { display: flex; gap: 12px; font-size: 0.8rem; }
-.legend-available   { color: green; }
-.legend-booked      { color: red; }
-
-#catering-date {
-    display: none;
-}
-.cal-day span {
-    pointer-events: none;
-}
-
 /* || Checkout Page */
 
-.payment-page{
+.payment-page {
     font-family: 'Inter', sans-serif;
-    color:#2d1e1e;
+    color: #2d1e1e;
 }
 
 .payment-page .mainheader {
@@ -803,17 +812,19 @@ body.product-body {
     margin: 20px auto;
 }
 
-.payment-page .logo{
+.payment-page .logo {
     height: 100px;
 }
-.payment-page .back-link{
+
+.payment-page .back-link {
     text-decoration: none;
     color: #b76e79;
     font-weight: 500;
 }
-.payment-page .back-link:hover{
+
+.payment-page .back-link:hover {
     color: #ec4899;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
 .payment-page .checkout-container {
@@ -824,7 +835,7 @@ body.product-body {
     padding: 20px;
 }
 
-.payment-page .checkout-left{
+.payment-page .checkout-left {
     flex: 1;
 }
 
@@ -837,42 +848,42 @@ body.product-body {
     box-shadow: 0 10px 30px rgba(183, 110, 121, 0.15);
 }
 
-.payment-page h2{
-    font-family:'Playfair Display', serif;
+.payment-page h2 {
+    font-family: 'Playfair Display', serif;
     color: #b76e79;
     margin-bottom: 20px;
 }
 
-.payment-page #payment-form{
+.payment-page #payment-form {
     background: #ffffff;
     padding: 25px;
     border-radius: 14px;
-    border:1px solid #f3d6dc;
+    border: 1px solid #f3d6dc;
     box-shadow: 0 10px 30px rgba(183, 110, 121, 0.12);
 }
 
-.payment-page input{
+.payment-page input {
     width: 100%;
     padding: 14px;
-    margin-bottom:14px;
+    margin-bottom: 14px;
     border: 1px solid #e5c9cf;
     border-radius: 10px;
-    font-size:14px;
+    font-size: 14px;
     box-sizing: border-box;
 }
 
-.payment-page input:focus{
+.payment-page input:focus {
     outline: none;
     border-color: #f472b6;
     box-shadow: 0 0 0 3px rgba(224, 114, 182, 0.2);
 }
 
-.payment-page .row{
+.payment-page .row {
     display: flex;
     gap: 10px;
 }
 
-.payment-page button{
+.payment-page button {
     width: 100%;
     padding: 15px;
     background: linear-gradient(135deg, #f9a8d4, #F472B6);
@@ -883,9 +894,9 @@ body.product-body {
     cursor: pointer;
 }
 
-.payment-page button:hover{
+.payment-page button:hover {
     background: linear-gradient(135deg, #F472b6, #ec4899);
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 }
 
 .payment-page #message {
@@ -898,6 +909,7 @@ body.product-body {
     .payment-page .checkout-container {
         flex-direction: column;
     }
+
     .payment-page .checkout-right {
         width: 100%;
     }
