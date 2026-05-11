@@ -3,13 +3,10 @@ document.getElementById("payment-form").addEventListener("submit", function (e) 
     e.preventDefault();
 
     const formData = Object.fromEntries(new FormData(this));
-
     const message = document.getElementById("message");
 
-    // Clean card number (remove spaces)
     const cardNumber = formData.card.replace(/\s/g, "");
 
-    // Validation
     if (cardNumber.length < 16) {
         message.innerText = "Invalid card number";
         return;
@@ -29,11 +26,10 @@ document.getElementById("payment-form").addEventListener("submit", function (e) 
 
     setTimeout(() => {
         localStorage.setItem("lastOrder", JSON.stringify(formData));
-
-        message.innerText = "Payment successful 🌸";
+        message.innerText = "Payment successful";
 
         setTimeout(() => {
-            window.location.href = "success.html";
+            window.location.href = "index.html";
         }, 2000);
 
     }, 2000);
@@ -55,13 +51,13 @@ if (cardInput) {
 
 // Load order summary
 function loadOrderSummary() {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
     const container = document.getElementById("order-summary");
 
     if (!container) return;
 
     if (cart.length === 0) {
-        container.innerHTML = "<p>No items in cart</p>";
+        container.innerHTML = "<p>Your shopping cart is empty</p>";
         return;
     }
 
@@ -69,16 +65,16 @@ function loadOrderSummary() {
     container.innerHTML = "<h2>Order Summary</h2>";
 
     cart.forEach(item => {
-        total += item.price * item.qty;
+        const price = parseFloat(item.productPrice.replace("Price: £", ""));
+        total += price;
 
         container.innerHTML += `
-            <p>${item.name} x${item.qty} - £${(item.price * item.qty).toFixed(2)}</p>
+            <p>${item.productName} - £${price.toFixed(2)}</p>
         `;
     });
 
     container.innerHTML += `<h3>Total: £${total.toFixed(2)}</h3>`;
 
-    // Update button price
     const button = document.querySelector("#payment-form button");
     if (button) {
         button.innerText = `Pay £${total.toFixed(2)}`;

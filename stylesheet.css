@@ -924,3 +924,83 @@ body.product-body {
         height: 200px;
     }
 }
+
+/*shopping-cart*/
+
+.cart-item-card {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    background: #fff;
+    width: 280px;
+}
+
+.cart-item-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    min-height: 60px;
+}
+
+.cart-item-name {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.cart-item-price {
+    margin: 2px 0;
+    font-size: 0.8rem;
+}
+
+.delete-btn {
+    align-self: flex-end;
+    background-color: #ec4899;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.delete-btn:hover {
+    background-color: #F472b6;
+}
+/*Order Summary card
+ */
+.order-summary-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 380px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.order-summary-card h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.order-summary-card p {
+    margin: 6px 0;
+    font-size: 1rem;
+}
+
+.order-summary-card h3 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}

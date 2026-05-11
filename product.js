@@ -1,23 +1,28 @@
 window.addEventListener('load', function () {
 
-    const shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+    let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 
-    const thisProduct = document.querySelectorAll(".product");
+    const products = document.querySelectorAll(".product");
 
-    thisProduct.forEach(thisProduct => {
+    products.forEach(product => {
 
-        const addProductBtn = thisProduct.querySelector(".link-btn");
+        const addProductBtn = product.querySelector(".link-btn");
 
         addProductBtn.addEventListener('click', function (e) {
             e.preventDefault();
 
-            const productName = thisProduct.querySelector(".name").innerText;
-            const productPrice = thisProduct.querySelector(".price").innerText;
+            const productName = product.querySelector(".name").innerText;
+            const productPrice = product.querySelector(".price").innerText;
+            const productImage = product.querySelector("img").src;
 
-            addToShoppingCart({ productName, productPrice });
+            shoppingCart.push({ productName, productPrice, productImage });
+            localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
 
-            addProductBtn.textContent = '✓ Added to Cart!';
+            updateCartSize();
+
+            addProductBtn.textContent = 'Added to Cart';
             addProductBtn.style.backgroundColor = 'green';
+
             setTimeout(() => {
                 addProductBtn.textContent = 'Add to cart';
                 addProductBtn.style.backgroundColor = '';
@@ -25,10 +30,5 @@ window.addEventListener('load', function () {
         });
 
     });
-
-    function addToShoppingCart(product) {
-        shoppingCart.push(product);
-        localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
-    }
 
 });
