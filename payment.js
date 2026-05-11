@@ -47,6 +47,30 @@ if (cardInput) {
         e.target.value = value;
     });
 }
+//CVC formatting(max no of digits=3)
+const cvcInput = document.querySelector('input[name="cvc"]');
+if (cvcInput){
+    cvcInput.addEventListener("input",(e)=>{
+        let value = e.target.value.replace(/\D/g,"").trim();
+        if (value.length> 3) value = value.trim().slice(0, 3);
+        e.target.value = value.trim();
+
+    });
+
+}
+//Expiry date formatting
+const expiryInput = document.querySelector('input[name="expiry"]');
+if(expiryInput){
+
+    expiryInput.addEventListener("input",(e) => {
+        let value = e.target.value.replace(/\D/g, "").trim();
+        if (value.length > 4) value = value.trim().slice(0, 4);
+        value = value.replace(/(\d{2})(\d{1,2})/, "$1/$2").trim();
+        if(value.length>=3){
+    }
+    e.target.value= value.trim();
+    })
+}
 
 
 // Load order summary
