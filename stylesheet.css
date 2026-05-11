@@ -4,7 +4,7 @@ body {
     font-family: 'Inter', serif;
     font-size: 20px;
     background-color: #ffe5ec;
-    background-image: url("https://www.transparenttextures.com/patterns/flowers.png"), linear-gradient(to bottom, #fff7fa, #ffeef3);
+    background-image: url("https://www.transparenttextures.com/patterns/flowers.png"), linear-gradient(to bottom, #ffe4ee, #ffeef3);
     background-attachment: fixed;
 }
 
