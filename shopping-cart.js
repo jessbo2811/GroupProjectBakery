@@ -1,34 +1,70 @@
-const cartSize = document.querySelector("#cart-size");
-if (cartSize) {
+function updateCartSize() {
+    const cartSizeElement = document.querySelector("#cart-size");
+    if (!cartSizeElement) return;
+
     const cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
-    cartSize.textContent = cart.length;
+    cartSizeElement.textContent = cart.length;
 }
 
-window.addEventListener('load', function() {
 
-    const shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
-    const cartItems = document.querySelector("#cart-items");
-    const cartTotal = document.querySelector("#cart-total");
-    const cartSize = document.querySelector("#cart-size");
-    const shoppingCartSize = shoppingCart.length;
-    let total = 0;
 
-    if (!cartItems || !cartTotal) return;
+// Always update cart size on page load
+updateCartSize();
 
-    if (shoppingCartSize === 0) {
-        cartItems.textContent = "Your Shopping Cart is Empty";
-    } else {
-        shoppingCart.forEach(item => {
-            const liItem = document.createElement("li");
-            liItem.className = 'item';
-            liItem.textContent = item.productName + ' - ' + item.productPrice;
-            cartItems.append(liItem);
+window.addEventListener("load", function () {
+
+    let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+
+    const cartItemsElement = document.querySelector("#cart-items");
+    const cartTotalElement = document.querySelector("#cart-total");
+
+    if (!cartItemsElement || !cartTotalElement) return;
+
+    function renderCart() {
+        cartItemsElement.innerHTML = "";
+        let totalAmount = 0;
+
+        if (shoppingCart.length === 0) {
+            cartItemsElement.textContent = "";
+            cartTotalElement.textContent = "0.00";
+            updateCartSize();
+            return;
+        }
+
+        shoppingCart.forEach((item, index) => {
+            const card = document.createElement("div");
+            card.className = "cart-item-card";
+
+            card.innerHTML = `
+                <img src="${item.productImage}" class="cart-item-image">
+
+                <div class="cart-item-info">
+                    <div>
+                        <h4 class="cart-item-name">${item.productName}</h4>
+                        <p class="cart-item-price">${item.productPrice}</p>
+                    </div>
+
+                    <button class="delete-btn" onclick="deleteItem(${index})">Delete</button>
+                </div>
+            `;
+
+            cartItemsElement.append(card);
+
             const priceNumber = parseFloat(item.productPrice.replace("Price: £", ""));
-            total += priceNumber;
+            totalAmount += priceNumber;
         });
+
+        cartTotalElement.textContent = totalAmount.toFixed(2);
+        updateCartSize();
     }
 
-    cartTotal.textContent = total.toFixed(2);
-    cartSize.textContent = shoppingCartSize;
+    // Delete item + update cart size instantly
+    window.deleteItem = function (index) {
+        shoppingCart.splice(index, 1);
+        localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+        updateCartSize();
+        renderCart();
+    };
 
+    renderCart();
 });
