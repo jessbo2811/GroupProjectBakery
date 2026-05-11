@@ -22,7 +22,7 @@ if ($mysqli->connect_errno) {
 $email = htmlspecialchars(trim($_POST['email']), ENT_QUOTES);
 $menuChoice = htmlspecialchars($_POST['menu-choice'], ENT_QUOTES);
 $date = htmlspecialchars(trim($_POST['catering-date']), ENT_QUOTES);
-$portion = htmlspecialchars($_POST['portion'], ENT_QUOTES); // K
+$eventSize = htmlspecialchars($_POST['size'], ENT_QUOTES); // K
 
 $check = $mysqli->prepare("SELECT cateringID FROM tCatering WHERE cateringDate = ?");
 $check->bind_param("s", $date);
@@ -42,7 +42,7 @@ $stmt = $mysqli->prepare("
     VALUES (?, ?, ?, ?)
 ");
 
-$stmt->bind_param("sss", $email, $menuChoice, $date, $portion);
+$stmt->bind_param("ssss", $email, $menuChoice, $date, $eventSize);
 
 if ($stmt->execute()) {
     echo json_encode(['success' => true]);

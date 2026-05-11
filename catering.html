@@ -56,7 +56,7 @@
                 <p>Take a look at some of the events we've catered for below:</p>
                 <ul id="catering-images">
                     <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 1.jpeg'); return false;">Image 1</a></li>
-                    <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 2.jpeg'); return false;">Image 2</li>
+                    <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 2.jpeg'); return false;">Image 2</a></li>
                     <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 3.jpeg'); return false;">Image 3</a></li>
                     <li><a class="link-btn" href="#" onclick="changeImg('images/Catering Img 4.jpeg'); return false;">Image 4</a></li>
                 </ul>
@@ -85,14 +85,14 @@
                     <span id="hint_date" class="hint"> - please select a suitable catering date</span>
                     <div id="availability-calendar"></div>
                     <p id="selected-date-display">Selected date: </p>
-                    <input type="date" id="catering-date" name="catering-date" style="display:none;">
-                    <label for="portion">Which Portion:</label><br>
-                    <span id="hint_portion" class="hint"> - please select a portion</span><!--K-->
-                    <input type="radio" id="10-20-opt" name="portion" value="10-20">
+                    <input type="date" name="catering-date" style="display:none;">
+                    <label for="portion">What size is your event?:</label><br>
+                    <span id="hint_size" class="hint"> - please select an option</span><!--K-->
+                    <input type="radio" id="10-20-opt" name="size" value="10-20">
                     <label for="10-20-opt">10-20</label><br>
-                    <input type="radio" id="20-50-opt" name="portion" value="20-50">
+                    <input type="radio" id="20-50-opt" name="size" value="20-50">
                     <label for="20-50-opt">20-50</label><br>
-                    <input type="radio" id="50+-opt" name="portion" value="50+">
+                    <input type="radio" id="50+-opt" name="size" value="50+">
                     <label for="50+-opt">50+</label><br>
                     <button id="send-enq" type="submit" name="send_enq">Send Enquiry</button>
                 </form>
