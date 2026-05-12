@@ -22,7 +22,7 @@ if ($mysqli->connect_errno) {
 $email = htmlspecialchars(trim($_POST['email']), ENT_QUOTES);
 $menuChoice = htmlspecialchars($_POST['menu-choice'], ENT_QUOTES);
 $date = htmlspecialchars(trim($_POST['catering-date']), ENT_QUOTES);
-$eventSize = htmlspecialchars($_POST['portion'], ENT_QUOTES); // K
+$eventSize = htmlspecialchars($_POST['size'], ENT_QUOTES); // K
 
 $check = $mysqli->prepare("SELECT cateringID FROM tCatering WHERE cateringDate = ?");
 $check->bind_param("s", $date);
@@ -38,7 +38,7 @@ if ($check->num_rows > 0) {
 $check->close();
 
 $stmt = $mysqli->prepare("
-    INSERT INTO tCatering (cateringEmail, cateringMenuChoice, cateringDate, cateringPortion)
+    INSERT INTO tCatering (cateringEmail, cateringMenuChoice, cateringDate, cateringEventSize)
     VALUES (?, ?, ?, ?)
 ");
 

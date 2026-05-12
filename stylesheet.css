@@ -160,6 +160,7 @@ button:hover, .link-btn:hover {
         padding-right: 4%;
         box-sizing: border-box;
         width: 100%;
+        margin-bottom: 20px;
     }
 
     .catering-desc,
@@ -308,6 +309,7 @@ button:hover, .link-btn:hover {
     padding-right: 10%;
     padding-bottom: 5%;
     padding-top: 5%;
+    margin-bottom: 30px;
 }
 
 .shopping-cart {
@@ -356,6 +358,7 @@ button:hover, .link-btn:hover {
     width: 100%;
     padding: 10px;
     background-color: rgba(255, 179, 198, 0.3);
+    margin-bottom: 20px;
 }
 
 .index-img1 img, .index-img2 img, .index-img3 img {
@@ -363,6 +366,7 @@ button:hover, .link-btn:hover {
     height: 200px;
     object-fit: cover;
     display: block;
+    margin-bottom: 20px;
 }
 
 .index-cust-orders {
@@ -372,6 +376,7 @@ button:hover, .link-btn:hover {
     border: 1px solid rgb(255, 0, 149);
     border-radius: 8px;
     background-color: rgba(255, 179, 198, 0.3);
+    margin-bottom: 20px;
 }
 
 .index-promo1 { grid-area: index-promo1; }
@@ -382,6 +387,7 @@ button:hover, .link-btn:hover {
     width: 100%;
     padding: 10px;
     background-color: rgba(255, 179, 198, 0.3);
+    margin-bottom: 20px;
 }
 
 .index-promo1 img, .index-promo2 img, .index-promo3 img {
@@ -389,6 +395,7 @@ button:hover, .link-btn:hover {
     height: 200px;
     object-fit: cover;
     display: block;
+    margin-bottom: 20px;
 }
 
 .index-aboutus {
@@ -398,6 +405,7 @@ button:hover, .link-btn:hover {
     border-radius: 8px;
     text-align: center;
     border: 1px solid rgb(255, 0, 149);
+    margin-bottom: 20px;
 }
 
 /* || Contact Page */
@@ -433,6 +441,7 @@ button:hover, .link-btn:hover {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px black;
+    margin-bottom: 20px;
 }
 
 .contact-form input[type="date"],
@@ -504,6 +513,20 @@ input {
     margin: 0;
 }
 
+.map-container {
+    width: 100%;
+    max-width: 600px;
+    height: 200px;
+    margin: 10px auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 /* || About Page */
 
 .gd-about {
@@ -527,6 +550,7 @@ input {
     border: 1px solid rgb(255, 0, 149);
     border-radius: 8px;
     background-color: rgba(255, 179, 198, 0.3);
+    margin-bottom: 20px;
 }
 
 .gd-about-content {
@@ -534,6 +558,7 @@ input {
     padding: 30px;
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 .gd-about-content2 {
@@ -541,6 +566,7 @@ input {
     padding: 30px;
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 .gd-about-team {
@@ -548,6 +574,7 @@ input {
     padding: 30px;
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 .meet-the-team {
