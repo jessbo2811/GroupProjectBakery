@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
     const hintMenuChoice = form.querySelector('#hint_menuChoice');
     const hintDate = form.querySelector('#hint_date');
     const date = form.querySelector('#catering-date');
-    const hintPortion = form.querySelector('#hint_portion'); // K
+    const hintSize = form.querySelector('#hint_size'); // K
     const sendButton = form.querySelector('#send-enq');
 
     const now = new Date();
@@ -129,12 +129,12 @@ window.addEventListener('load', function () {
         e.preventDefault();
 
         const menuChoice = form.querySelector("input[name='menu-choice']:checked");
-        const portionChoice = form.querySelector("input[name='portion']:checked"); // K
+        const sizeChoice = form.querySelector("input[name='size']:checked"); // K
 
         const cateringEmail = email.value.trim();
         const selectedMenuChoice = menuChoice ? menuChoice.value : null;
         const cateringDate = date.value.trim();
-        const selectedPortion = portionChoice ? portionChoice.value : null; // K
+        const selectedSize = sizeChoice ? sizeChoice.value : null; // K
 
         let fieldsOK = true;
 
@@ -159,11 +159,11 @@ window.addEventListener('load', function () {
             hintDate.style.display = 'none';
         }
 
-        if (selectedPortion == null) {
-            hintPortion.style.display = 'inline';
+        if (selectedSize == null) {
+            hintSize.style.display = 'inline';
             fieldsOK = false;
         } else {
-            hintPortion.style.display = 'none';
+            hintSize.style.display = 'none';
         }
 
         if (fieldsOK) {
@@ -171,7 +171,7 @@ window.addEventListener('load', function () {
             formData.append('email', cateringEmail);
             formData.append('menu-choice', selectedMenuChoice);
             formData.append('catering-date', cateringDate);
-            formData.append('portion', selectedPortion); // K
+            formData.append('size', selectedSize); // K
 
             fetch('book-catering.php', {
                 method: 'POST',

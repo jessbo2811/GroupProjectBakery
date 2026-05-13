@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <script src="catering.js"></script>
     <script>
         function changeImg(src) {
             document.getElementById('catering-placeholder').src = src;
@@ -81,8 +80,8 @@
                     <label for="savoury-opt">Savoury</label><br>
                     <input type="radio" id="sweetnsavoury-opt" name="menu-choice" value="SWEET AND SAVOURY">
                     <label for="sweetnsavoury-opt">Sweet and Savoury</label><br><br>
-                    <label for="portion">What Size is your Event?:</label>
-                    <span id="hint_portion" class="hint"> - please select an option</span><br><!--K-->
+                    <label for="size">What Size is your Event?:</label><br>
+                    <span id="hint_size" class="hint"> - please select an option</span>
                     <input type="radio" id="10-20-opt" name="size" value="10-20">
                     <label for="10-20-opt">10-20</label><br>
                     <input type="radio" id="20-50-opt" name="size" value="20-50">
@@ -202,6 +201,6 @@
     </footer>
 
     <script src="shopping-cart.js"></script>
-
+    <script src="catering.js"></script>
 </body>
 </html>
