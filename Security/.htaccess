@@ -1,0 +1,82 @@
+#Password Authentication
+AuthType Basic
+AuthName"Only authorised Personnel may access this: please input password"
+AuthUserFile /home/zmi10/public_html/Petalbakes/GroupProjectBakery/.htAuth
+require valid-user
+
+#This text file contains the code for applying a secure firewall
+
+#As our online bakery was originally developed on a local environment, we simulated a real-server side firewall on brighton domains by uploading all our project files onto public_html and adding a .htaccess file.
+#This allowed us to implement Apache-based security rules that protect our website from common attacks.
+
+#1. *****Basic Hardening******
+
+Options -Indexes # prevents directory browsing
+<FilesMatch "\.(env|ini|log|bak|sql|sh|config|yml|yaml)$">#Blocks attackers from accessing sensitive config files
+Require all denied  # Works by blocking dangerous files
+</FilesMatch>
+
+<Files ".htaccess">#prevents attackers from tampering with the files
+    Require all denied
+</Files>
+
+ServerSignature Off # Hides server info from attackers
+
+#2.*****Including Security headers*****
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+
+#3.*******Bad bot blocking*********
+
+SetEnvIfNoCase User-Agent "curl" bad_bot
+SetEnvIfNoCase User-Agent "wget" bad_bot
+SetEnvIfNoCase User-Agent "sqlmap" bad_bot
+SetEnvIfNoCase User-Agent "nikto" bad_bot
+SetEnvIfNoCase User-Agent "acunetix" bad_bot
+SetEnvIfNoCase User-Agent "nessus" bad_bot
+Order Allow, Deny
+Allow from all
+Deny from env=bad_bot
+
+#mitigates automated attacks and penetration-testing tools commonly used by these attackers.
+
+
+#4.Basic WAF-style filtering
+
+RewriteEngine On
+#Block dangerous HTTP methods (Adobe Style)
+RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK|DEBUG|OPTIONS)$ [NC]
+RewriteRule .* - [F,L]
+
+#Block directory traversal attempts
+RewriteCond %{QUERY_STRING} (\.\./|\.\.\\|/etc/passwd|/proc/self/environ|select%20|union%20|insert%20|drop%20|update%20|delete%20|outfile|load_file|into%20dumpfile) [NC]
+RewriteRule .* - [F,L]
+
+#Block access to system files (Adobe blocks/ etc/passwd, /proc)
+RewriteCond %{REQUEST_URI} (\.\./|\.\.\\) [NC]
+RewriteRule .* - [F,L]
+#Block SQL injection keywords(Adobe WAF patterns)
+RewriteCond %{QUERY_STRING} (union|select|insert|drop|delete|update|outfile|dumpfile|load_file) [NC]
+RewriteRule .* - [F,L]
+#Block Remote File inclusion (Adobe blocks http://, https://, ftp:// in params)
+RewriteCond %{QUERY_STRING} (http|https|ftp)\:\/\/ [NC]
+RewriteRule .* - [F,L]
+#Block encoded null-byte attacks
+RewriteCond %{THE_REQUEST} "%00" [NC,OR]
+RewriteCond %{THE_REQUEST} "%00" [NC]
+RewriteRule .* - [F,L]
+#Block overly long malicious payloads(Adobe blocks large requests)
+RewriteCond %{QUERY_STRING} .{2048} [NC]
+RewriteRule .* - [F,L]
+
+#Block suspicious file extensions(Adobe blocks .php, .jsp, .exe uploads)
+RewriteCond %{REQUEST_URI} \.(php|jsp|asp|exe|sh|bat)$ [NC]
+RewriteRule .* - [F,L]
+#Rewrite rules act as a prevention measure for traversal, SQL injection, RFI, etc.
+
+
