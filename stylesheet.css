@@ -652,6 +652,7 @@ input {
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
     padding: 20px;
+    text-align: center;
 }
 
 .catering-menu-savoury {
@@ -659,6 +660,7 @@ input {
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
     padding: 20px;
+    text-align: center;
 }
 
 .catering-menu-ss {
@@ -666,6 +668,7 @@ input {
     background-color: rgba(255, 179, 198, 0.3);
     border-radius: 8px;
     padding: 20px;
+    text-align: center;
 }
 
 .catering-form {
