@@ -1,3 +1,9 @@
+#Password Authentication
+AuthType Basic
+AuthName"Only authorised Personnel may access this: please input password"
+AuthUserFile /home/zmi10/public_html/Petalbakes/GroupProjectBakery/.htAuth
+require valid-user
+
 #This text file contains the code for applying a secure firewall
 
 #As our online bakery was originally developed on a local environment, we simulated a real-server side firewall on brighton domains by uploading all our project files onto public_html and adding a .htaccess file.
@@ -70,8 +76,7 @@ RewriteRule .* - [F,L]
 
 #Block suspicious file extensions(Adobe blocks .php, .jsp, .exe uploads)
 RewriteCond %{REQUEST_URI} \.(php|jsp|asp|exe|sh|bat)$ [NC]
-RewriteRule .* - [F,l]
-
+RewriteRule .* - [F,L]
 #Rewrite rules act as a prevention measure for traversal, SQL injection, RFI, etc.
 
 
